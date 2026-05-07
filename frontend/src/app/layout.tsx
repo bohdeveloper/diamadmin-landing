@@ -1,8 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import SocialPanel from "@/components/ui/SocialPanel";
-import EmailPanel from "@/components/ui/EmailPanel";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,24 +16,25 @@ export const viewport = {
    METADATA SEO GLOBAL
 ============================ */
 export const metadata = {
-  metadataBase: new URL("https://www.bohdeveloper.com"),
+  metadataBase: new URL("https://www.diamadmin.com"),
 
-  title: "Borja Olazabal | Programador Web y Desarrollador Full Stack",
+  title: "Diamadmin | Software de gestión administrativa para pymes",
   description:
-    "Borja Olazabal, programador web especializado en desarrollo frontend y backend. Descubre mi portfolio, proyectos y experiencia profesional.",
+    "Diamadmin es una aplicación modular de gestión administrativa para pequeñas y medianas empresas. Centraliza clientes, facturación, proyectos y más desde un solo lugar.",
 
   keywords: [
-    "Borja Olazabal",
-    "programador web",
-    "desarrollador web",
-    "full stack",
-    "portfolio",
+    "Diamadmin",
+    "software de gestión",
+    "gestión administrativa",
+    "ERP pymes",
+    "facturación",
+    "gestión de clientes",
+    "aplicación empresarial",
+    "SaaS",
     "Next.js",
-    "TypeScript",
-    "Prisma"
   ],
 
-  authors: [{ name: "Borja Olazabal" }],
+  authors: [{ name: "Diamadmin" }],
   robots: "index, follow",
 
   icons: {
@@ -44,19 +43,19 @@ export const metadata = {
 
   /* ---------- OPEN GRAPH ---------- */
   openGraph: {
-    title: "Borja Olazabal | Programador Web",
+    title: "Diamadmin | Gestión administrativa sencilla y modular",
     description:
-      "Portfolio profesional de Borja Olazabal, programador web y desarrollador full stack. Proyectos, código y experiencia real.",
-    url: "https://www.bohdeveloper.com",
-    siteName: "bohdeveloper",
+      "Software de gestión administrativa pensado para pymes y negocios modernos. Modular, rápido y fácil de usar.",
+    url: "https://www.diamadmin.com",
+    siteName: "Diamadmin",
     locale: "es_ES",
     type: "website",
     images: [
       {
-        url: "/images/Borja-Olazabal.png",
+        url: "/images/diamadmin-og.png",
         width: 1200,
         height: 630,
-        alt: "Borja Olazabal - Programador web",
+        alt: "Diamadmin - Software de gestión administrativa",
       },
     ],
   },
@@ -64,40 +63,50 @@ export const metadata = {
   /* ---------- TWITTER ---------- */
   twitter: {
     card: "summary_large_image",
-    title: "Borja Olazabal | Programador Web",
+    title: "Diamadmin | Software de gestión para pymes",
     description:
-      "Portfolio profesional de Borja Olazabal, programador web y desarrollador full stack.",
-    images: ["/images/Borja-Olazabal.png"],
+      "Centraliza la gestión administrativa de tu negocio con Diamadmin. Modular, moderno y enfocado a pymes.",
+    images: ["/images/diamadmin-og.png"],
   },
 };
 
 /* ============================
    ROOT LAYOUT
 ============================ */
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="es" suppressHydrationWarning>
       <body className={`${inter.className} transition-colors duration-300`}>
 
         {/* ============================
-           JSON-LD: PERSON
+           JSON-LD: SOFTWARE APPLICATION
         ============================ */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Borja Olazabal",
-              "url": "https://www.bohdeveloper.com",
-              "image": "https://www.bohdeveloper.com/images/Borja-Olazabal.png",
-              "jobTitle": "Programador web",
+              "@type": "SoftwareApplication",
+              "name": "Diamadmin",
+              "url": "https://www.diamadmin.com",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "Web",
               "description":
-                "Borja Olazabal es programador web y desarrollador full stack especializado en desarrollo frontend y backend.",
-              "sameAs": [
-                "https://github.com/bohdeveloper",
-                "https://www.linkedin.com/in/bolazabal"
-              ]
+                "Diamadmin es un software de gestión administrativa modular orientado a pequeñas y medianas empresas.",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR",
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "Diamadmin",
+                "url": "https://www.diamadmin.com",
+              },
             }),
           }}
         />
@@ -111,13 +120,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "bohdeveloper",
-              "url": "https://www.bohdeveloper.com",
+              "name": "Diamadmin",
+              "url": "https://www.diamadmin.com",
               "description":
-                "Portfolio profesional de Borja Olazabal, programador web y desarrollador full stack.",
+                "Landing oficial de Diamadmin, software de gestión administrativa para pymes.",
               "publisher": {
-                "@type": "Person",
-                "name": "Borja Olazabal",
+                "@type": "Organization",
+                "name": "Diamadmin",
               },
             }),
           }}
@@ -147,9 +156,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <Navbar />
         <main>{children}</main>
-
-        <SocialPanel />
-        <EmailPanel />
         <Footer />
       </body>
     </html>

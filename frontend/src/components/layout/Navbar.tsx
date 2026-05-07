@@ -17,7 +17,7 @@ export default function Navbar() {
             className="flex items-center gap-2"
           >
             <img
-              src="../../../images/bohdeveloper-desarrollador-web.png"
+              src="../../../images/logo.png"
               alt="Borja Olazabal, programador web"
               className="h-14 w-auto logo-filter"
             />
@@ -79,23 +79,12 @@ export default function Navbar() {
         {/* MENÚ DESKTOP */}
         <div className="links hidden md:flex items-center gap-8">
           <ul className="flex items-center gap-8 text-lg font-medium">
-            <li><a href="#quien-soy" className="hover:text-primary transition">Quién soy</a></li>
-            <li><a href="#experiencia" className="hover:text-primary transition">Experiencia</a></li>
-            <li><a href="#proyectos" className="hover:text-primary transition">Proyectos</a></li>
-            <li><a href="#aprendizaje" className="hover:text-primary transition">Aprendizaje</a></li>
+            <li><a href="#producto" className="hover:text-primary transition">Producto</a></li>
+            <li><a href="#subscripción" className="hover:text-primary transition">Subscripción</a></li>
             <li><a href="#contacto" className="hover:text-primary transition">Contacto</a></li>
           </ul>
 
           <div className="flex items-center gap-4">
-            <a
-              href="../../../borja-olazabal-programador-web-cv.pdf"
-              target="_blank"
-              aria-label="Currículum de Borja Olazabal, programador web"
-              className="px-4 py-2 border border-cyan-400 text-primary rounded hover:bg-cyan-400 hover:text-black transition"
-            >
-              Accede a mi CV
-            </a>
-
             <ThemeToggle />
           </div>
         </div>

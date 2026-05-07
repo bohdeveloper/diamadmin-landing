@@ -7,7 +7,7 @@ export default function Footer() {
           Borja Olazabal
         </span>
         <span className="block mt-1 text-xs text-gray-500 dark:text-gray-500">
-          Programador web · Portfolio profesional
+          Programador web · Diamadmin
         </span>
       </div>
     </footer>
