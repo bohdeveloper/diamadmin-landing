@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================
+   RESET MODERNO
+============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================
+   VARIABLES DE COLOR
+============================ */
+
+:root {
+  --primary: #00a8bf; /* MODO CLARO */
+  --bg: #fdfefe;
+  --text: #1a1a1a;
+}
+
+html.dark {
+  --primary: #00e7eb; /* MODO OSCURO */
+  --bg: #0d0d0d;
+  --text: #f5f5f5;
+}
+
+.text-primary {
+  color: var(--primary);  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+html.light {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* ============================
+   APLICACIÓN DE COLORES
+============================ */
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ============================
+   ESTILOS BASE
+============================ */
+
+section {
+  padding: 6rem 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* ============================
+   NAVBAR
+============================ */
+
+.navbar {
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+html.light .logo-filter {
+  filter:
+    brightness(0.85)
+    saturate(0.85)
+    hue-rotate(-4deg);
+}
+
+html.dark .logo-filter {
+  filter: none; /* mantiene el color brillante original */
+}
+
+/* ============================
+   FOOTER
+============================ */
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* ============================
+   UTILIDADES
+============================ */
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+/* ============================
+   ANIMACIONES
+============================ */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(1.05);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* ============================
+   OCULTAR LOGO DE NEXT.JS
+============================ */
+#next-logo {
+  display: none !important;
+}
