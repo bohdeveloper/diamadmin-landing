@@ -115,20 +115,11 @@ html.dark .logo-filter {
 footer {
   padding: 2rem;
   text-align: center;
-  opacity: 0.7;
 }
 
 /* ============================
    UTILIDADES
 ============================ */
-
-.text-primary {
-  color: var(--primary);
-}
-
-.bg-primary {
-  background-color: var(--primary);
-}
 
 /* ============================
    ANIMACIONES
