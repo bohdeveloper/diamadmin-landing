@@ -13,7 +13,7 @@ export default function Home() {
       <Producto />
       <Modulos />
       <ComoFunciona />
-      <Suscripcion />
+      {/* <Suscripcion /> */}
       <QuienesSomos />
       <Contacto />
     </>
