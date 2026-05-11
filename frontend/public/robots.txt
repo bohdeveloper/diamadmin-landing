@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.diamadmin.com/sitemap.xml
+Sitemap: https://diamadmin.com/sitemap.xml

@@ -1,0 +1,6 @@
+# Redirige www a no-www
+https://www.diamadmin.com/* https://diamadmin.com/:splat 301
+
+# Evita redirecciones innecesarias
+/sitemap.xml /sitemap.xml 200
+/robots.txt /robots.txt 200
