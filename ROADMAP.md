@@ -8,12 +8,16 @@ Objetivo: explicar el producto y validar interés real.
 ✅ Landing estática en diamadmin.com  
 ✅ Copy claro sobre qué es Diamadmin  
 ✅ Roadmap público  
-✅ Formularios de contacto / feedback  
-✅ Métricas básicas (visitas, interés)  
+✅ Animaciones e identidad visual (Framer Motion, paleta azul/diamante)  
+✅ Dark / light mode  
+✅ SEO técnico completo (JSON-LD, sitemap, Open Graph, Twitter Cards)  
+✅ Formularios de contacto / feedback (UX completa — integración backend pendiente)  
+⏳ Métricas básicas (visitas, interés)  
+⏳ Estrategia de precios (actualmente ocultos, pendiente decisión)  
 
 Resultado esperado:
 - Validación temprana
-- Feedback real
+- Feedback real de usuarios y sectores
 - Claridad de enfoque del producto
 
 ---
@@ -24,12 +28,15 @@ Objetivo: construir bases sólidas sin presión de marketing.
 - Backend Spring Boot
 - Angular (standalone + routing modular)
 - PostgreSQL
-- Arquitectura por dominios
+- Arquitectura por dominios / multi-sector
 - Seguridad básica
 - CRUD de catálogo
 
-Dominio:
-`app.diamadmin.com`
+La app seguirá el mismo modelo multi-sector que comunica la landing:
+módulos activables por dominio (Retail, Logística, Salud, Hostelería,
+Industria, Real Estate, RRHH, Finanzas).
+
+Dominio: `app.diamadmin.com`
 
 ---
 
@@ -69,6 +76,6 @@ Objetivo: entregar algo estable.
 Objetivo: base para monetización.
 
 - Feature flags
-- Licencias
+- Licencias y pricing (definición pendiente desde FASE 0)
 - Analytics propios
 - Configuración multiempresa

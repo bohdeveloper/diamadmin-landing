@@ -1,7 +1,7 @@
 # Diamadmin – Landing oficial
 
 🌐 **Dominio:** https://diamadmin.com  
-🚀 **Despliegue:** Cloudflare Pages  
+🚀 **Despliegue:** Cloudflare Pages
 
 ---
 
@@ -18,12 +18,16 @@ La aplicación real vive en un dominio separado (`app.diamadmin.com`) y en un re
 
 ## 1. Tecnologías utilizadas
 
-### Frontend (estado actual)
-- Next.js 14
+### Frontend
+- Next.js 15.1.6
 - React 18
 - TypeScript
 - TailwindCSS
+- motion/react (Framer Motion)
+- lucide-react
+- Bebas Neue (Google Fonts)
 - ESLint
+- cross-env
 - Cloudflare Pages
 
 > El sitio se genera como **static export**, priorizando SEO, velocidad y simplicidad.
@@ -32,14 +36,16 @@ La aplicación real vive en un dominio separado (`app.diamadmin.com`) y en un re
 
 ## 2. Arquitectura actual
 
-Next.js (Landing)<br>  
-↓<br>
-Cloudflare Pages  
+```
+Next.js (Landing)
+↓
+Cloudflare Pages
+```
 
 - Sitio estático sin backend propio
 - Renderizado en build-time
 - Optimizado para SEO y Core Web Vitals
-- Preparado para añadir APIs externas (formularios, analytics, etc.)
+- Formularios de contacto con UX completa (integración backend pendiente)
 
 ---
 
@@ -50,63 +56,84 @@ Diamadmin está dividido desde el inicio en **dos capas independientes**:
 ### 🌍 Landing (este repo)
 - Dominio: `diamadmin.com`
 - Objetivo: marketing, validación, captación
-- Tecnología: Next.js + Pages
-- Estado: estático
+- Tecnología: Next.js + Cloudflare Pages
+- Estado: productivo
 
 ### ⚙️ Aplicación real (otro repo)
 - Dominio: `app.diamadmin.com`
-- Angular + Spring Boot + Base de datos
+- Angular + Spring Boot + PostgreSQL
 - Hosting independiente (VPS / PaaS)
 - Autenticación, permisos, lógica de negocio
+- Arquitectura multi-sector: Retail, Logística, Salud, Hostelería, Industria, Real Estate, RRHH, Finanzas
 
 La landing **no depende de la app**, y la app **no depende de la landing**.
 
 ---
 
-## 4. Estructura del proyecto (simplificada)
-src/<br>
-├── app/<br>
-│   ├── page.tsx          # Home<br>
-│   ├── features/         # Secciones (producto, roadmap, etc.)<br>
-│   └── layout.tsx<br>
-├── data/<br>
-│   └── features.ts       # Contenido desacoplado<br>
-├── services/<br>
-│   └── contact.service.ts (futuro)<br>
-├── types/<br>
-│   └── feature.ts
+## 4. Estructura del proyecto
 
-La UI **no accede directamente a los datos**, permitiendo evolucionar el proyecto sin refactor pesado.
+```
+frontend/src/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx        # Root layout + SEO metadata + JSON-LD
+│   ├── page.tsx          # Composición de secciones
+│   └── sitemap.ts        # Sitemap dinámico
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   └── ThemeToggle.tsx
+│   └── sections/
+│       ├── Hero.tsx          # Animación diamante + honeycomb de sectores
+│       ├── Producto.tsx
+│       ├── Modulos.tsx       # Grid filtrable por sector
+│       ├── ComoFunciona.tsx
+│       ├── QuienesSomos.tsx
+│       └── Contacto.tsx      # Formulario 3 pestañas (contacto, sugerencia, newsletter)
+├── hooks/
+│   └── useFadeInOnScroll.ts
+├── lib/
+│   └── utils.ts
+├── styles/
+│   └── variables.css
+└── types/
+    └── css.d.ts
+```
 
 ---
 
 ## 5. Estado actual del proyecto
 
 ✅ Landing funcional y productiva  
-✅ SEO técnico optimizado  
+✅ SEO técnico completo (JSON-LD, sitemap, Open Graph, Twitter Cards)  
 ✅ Configuración estable con Cloudflare Pages  
-✅ Contenido desacoplado de la UI  
-✅ Preparada para validar el producto  
+✅ Dark / light mode con ThemeToggle y anti-flicker script  
+✅ Animaciones Framer Motion en Hero y todas las secciones  
+✅ Multi-sector: 8 sectores cubiertos (Retail, Logística, Salud, Hostelería, Industria, Real Estate, RRHH, Finanzas)  
+✅ Grid de módulos con filtro por sector  
+✅ Formulario de contacto con 3 pestañas (UX completa)  
+⏳ Integración backend del formulario de contacto  
+⏳ Analytics / métricas de visitas  
+⏳ Estrategia de precios (actualmente ocultos, pendiente decisión)  
 
 ---
 
-## 6. Instalación
+## 6. Instalación y desarrollo local
 
 ```bash
-npm install
+# Instalar dependencias
+cd frontend && npm install
+
+# Desarrollo local
+npm run dev          # http://localhost:3000
+
+# Build estático
+npm run build
+
+# Servir build
+npm run start
+
+# Linter
+npm run lint
 ```
-
-
- # Desarrollo local
- ```bash
-npm run build     # Build estático
-npm run start     # Servir build
-npm run lint      # Linter
-```
-
-8. Puesta en marcha
-```bash
-npm run dev
-```
-
-🌍 Disponible en: http://localhost:3000
