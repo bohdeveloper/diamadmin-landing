@@ -7,6 +7,7 @@ import {
   ShoppingCart, Truck, Heart, UtensilsCrossed,
   Factory, Building2, Users, BarChart2,
 } from "lucide-react";
+import { HERO_STATS } from "@/config/stats";
 
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"] });
 
@@ -376,21 +377,18 @@ export default function Hero() {
             style={{ textShadow: "0 0 120px rgba(61,181,230,0.55), 0 4px 40px rgba(0,0,0,0.55)" }}
           >
             DIAMADMIN
+            <span className="sr-only"> — Software de administración empresarial para pymes</span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg text-white/60 mb-8 leading-relaxed">
-            Centraliza, analiza y controla cada operación desde un único panel.{" "}
+            Centraliza, analiza y controla cada operación de tu negocio desde un único panel.{" "}
             <span className="text-white/85 font-medium">
-              Irrompible bajo presión, brillante en rendimiento.
+              La plataforma de administración empresarial diseñada para pymes exigentes.
             </span>
           </p>
 
           <div className="flex gap-5 sm:gap-8 md:gap-10 justify-center lg:justify-start">
-            {[
-              { value: "99.9%", label: "Disponibilidad" },
-              { value: "<50ms", label: "Latencia" },
-              { value: "10M+",  label: "Ops / día" },
-            ].map((stat, i) => (
+            {HERO_STATS.map((stat, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}

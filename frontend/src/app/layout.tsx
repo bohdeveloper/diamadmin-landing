@@ -16,26 +16,55 @@ export const viewport = {
    METADATA SEO GLOBAL
 ============================ */
 export const metadata = {
-  metadataBase: new URL("https://diamadmin.com"),
+  metadataBase: new URL("https://www.diamadmin.com"),
 
-  title: "Diamadmin | Software de gestión administrativa para pymes",
+  title: {
+    default: "Diamadmin · Administración Empresarial para Pymes",
+    template: "%s | Diamadmin",
+  },
   description:
-    "Diamadmin es una aplicación modular de gestión administrativa para pequeñas y medianas empresas. Centraliza clientes, facturación, proyectos y más desde un solo lugar.",
+    "Diamadmin es la aplicación de administración empresarial modular para organizar tu negocio. Controla stock, facturación, RRHH, logística y más desde una sola plataforma. Ideal para pymes de cualquier sector.",
 
   keywords: [
-    "Diamadmin",
-    "software de gestión",
-    "gestión administrativa",
+    "administración empresarial",
+    "aplicación administrativa",
+    "software de gestión empresarial",
+    "controlar stock empresa",
+    "organizar mi negocio",
     "ERP pymes",
-    "facturación",
-    "gestión de clientes",
-    "aplicación empresarial",
-    "SaaS",
-    "Next.js",
+    "gestión de stock",
+    "facturación para pymes",
+    "software de gestión modular",
+    "sistema administrativo empresarial",
+    "digitalización empresarial",
+    "gestión de negocios online",
+    "panel de administración empresa",
+    "software hostelería",
+    "gestión logística",
+    "gestión clínica",
+    "RRHH software",
+    "Diamadmin",
   ],
 
-  authors: [{ name: "Diamadmin" }],
-  robots: "index, follow",
+  authors: [{ name: "Diamadmin", url: "https://www.diamadmin.com" }],
+  creator: "Diamadmin",
+  publisher: "Diamadmin",
+
+  alternates: {
+    canonical: "https://www.diamadmin.com",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
 
   icons: {
     icon: [{ url: "/favicon.ico", sizes: "any" }],
@@ -43,9 +72,9 @@ export const metadata = {
 
   /* ---------- OPEN GRAPH ---------- */
   openGraph: {
-    title: "Diamadmin | Gestión administrativa sencilla y modular",
+    title: "Diamadmin · Administración Empresarial para Pymes",
     description:
-      "Software de gestión administrativa pensado para pymes y negocios modernos. Modular, rápido y fácil de usar.",
+      "Organiza tu negocio, controla el stock, gestiona tu equipo y automatiza la facturación. Diamadmin: la plataforma de administración empresarial modular para pymes de cualquier sector.",
     url: "https://www.diamadmin.com",
     siteName: "Diamadmin",
     locale: "es_ES",
@@ -55,7 +84,7 @@ export const metadata = {
         url: "/images/diamadmin-og.png",
         width: 1200,
         height: 630,
-        alt: "Diamadmin - Software de gestión administrativa",
+        alt: "Diamadmin - Aplicación de administración empresarial para pymes",
       },
     ],
   },
@@ -63,9 +92,9 @@ export const metadata = {
   /* ---------- TWITTER ---------- */
   twitter: {
     card: "summary_large_image",
-    title: "Diamadmin | Software de gestión para pymes",
+    title: "Diamadmin · Administración Empresarial para Pymes",
     description:
-      "Centraliza la gestión administrativa de tu negocio con Diamadmin. Modular, moderno y enfocado a pymes.",
+      "Controla el stock, organiza tu negocio y gestiona cada área desde un único panel. Diamadmin: software de gestión modular para pymes.",
     images: ["/images/diamadmin-og.png"],
   },
 };
@@ -96,17 +125,111 @@ export default function RootLayout({
               "applicationCategory": "BusinessApplication",
               "operatingSystem": "Web",
               "description":
-                "Diamadmin es un software de gestión administrativa modular orientado a pequeñas y medianas empresas.",
+                "Diamadmin es una aplicación de administración empresarial modular para pymes. Permite controlar stock, organizar el negocio, gestionar facturación, RRHH y logística desde un único panel.",
+              "featureList": [
+                "Control de stock e inventario",
+                "Facturación y contabilidad",
+                "Gestión de RRHH y nóminas",
+                "Módulo de ventas y TPV",
+                "Gestión logística y almacén",
+                "Historial clínico y gestión sanitaria",
+                "Analytics y dashboards en tiempo real",
+                "Gestión inmobiliaria",
+                "Hostelería y comanda digital",
+                "Módulo de producción industrial",
+              ],
               "offers": {
                 "@type": "Offer",
                 "price": "0",
                 "priceCurrency": "EUR",
+                "description": "Prueba gratuita disponible",
               },
               "publisher": {
                 "@type": "Organization",
                 "name": "Diamadmin",
                 "url": "https://www.diamadmin.com",
               },
+            }),
+          }}
+        />
+
+        {/* ============================
+           JSON-LD: ORGANIZATION
+        ============================ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Diamadmin",
+              "url": "https://www.diamadmin.com",
+              "logo": "https://www.diamadmin.com/images/logo.png",
+              "description":
+                "Diamadmin desarrolla software de administración empresarial modular para pymes. Soluciones para controlar stock, organizar negocios y digitalizar operaciones en más de 12 sectores.",
+              "foundingDate": "2024",
+              "areaServed": "ES",
+              "serviceType": [
+                "Software de administración empresarial",
+                "Aplicación para organizar negocios",
+                "Control de stock para empresas",
+                "ERP modular para pymes",
+              ],
+            }),
+          }}
+        />
+
+        {/* ============================
+           JSON-LD: FAQ (featured snippets)
+        ============================ */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "¿Qué es Diamadmin?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Diamadmin es una aplicación de administración empresarial modular para pymes. Permite centralizar y controlar ventas, stock, facturación, RRHH, logística y más desde un único panel, adaptándose a más de 12 sectores.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Cómo puedo controlar el stock de mi empresa con Diamadmin?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Con el módulo de Logística & Stock de Diamadmin puedes gestionar el inventario en tiempo real, controlar entradas y salidas, recibir alertas de stock mínimo y sincronizarlo con ventas y compras, todo integrado en tu operativa.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Cómo organizo mi negocio con Diamadmin?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Diamadmin te ayuda a organizar tu negocio activando únicamente los módulos que necesitas: ventas, facturación, gestión de equipo, análisis de datos, logística, etc. La configuración es guiada y puedes estar operativo en pocos días.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Para qué sectores está disponible Diamadmin?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Diamadmin cubre más de 12 sectores: retail, hostelería, logística, salud, industria, real estate, RRHH, finanzas y más. Cada sector dispone de módulos específicos adaptados a su operativa.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Es Diamadmin una alternativa al ERP tradicional?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. Diamadmin ofrece las funcionalidades de un ERP empresarial con una interfaz moderna y precios adaptados a pymes, sin la complejidad ni los costes de implementación de los sistemas tradicionales.",
+                  },
+                },
+              ],
             }),
           }}
         />
@@ -123,10 +246,11 @@ export default function RootLayout({
               "name": "Diamadmin",
               "url": "https://www.diamadmin.com",
               "description":
-                "Landing oficial de Diamadmin, software de gestión administrativa para pymes.",
-              "publisher": {
-                "@type": "Organization",
-                "name": "Diamadmin",
+                "Software de administración empresarial modular para pymes. Controla tu negocio, gestiona el stock y digitaliza operaciones con Diamadmin.",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.diamadmin.com/?q={search_term_string}",
+                "query-input": "required name=search_term_string",
               },
             }),
           }}
