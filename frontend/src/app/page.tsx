@@ -1,10 +1,10 @@
 import Hero from "@/components/sections/Hero";
 import Producto from "@/components/sections/Producto";
 import Modulos from "@/components/sections/Modulos";
-import ComoFunciona from "@/components/sections/ComoFunciona";
-import Suscripcion from "@/components/sections/Suscripcion";
 import QuienesSomos from "@/components/sections/QuienesSomos";
+import ComoFunciona from "@/components/sections/ComoFunciona";
 import Contacto from "@/components/sections/Contacto";
+// import Suscripcion from "@/components/sections/Suscripcion";
 
 export default function Home() {
   return (
@@ -12,10 +12,10 @@ export default function Home() {
       <Hero />
       <Producto />
       <Modulos />
-      <ComoFunciona />
-      {/* <Suscripcion /> */}
       <QuienesSomos />
+      <ComoFunciona />
       <Contacto />
+      {/* <Suscripcion /> */}
     </>
   );
 }

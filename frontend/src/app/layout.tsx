@@ -16,7 +16,7 @@ export const viewport = {
    METADATA SEO GLOBAL
 ============================ */
 export const metadata = {
-  metadataBase: new URL("https://www.diamadmin.com"),
+  metadataBase: new URL("https://diamadmin.com"),
 
   title: "Diamadmin | Software de gestión administrativa para pymes",
   description:
