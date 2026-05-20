@@ -15,11 +15,11 @@ export async function onRequestPost({ request, env }: { request: Request; env: E
 
     if (website?.trim()) return Response.json({ success: true });
 
-    if (!tipo?.trim() || !idea?.trim()) {
+    if (!email?.trim() || !tipo?.trim() || !idea?.trim()) {
       return Response.json({ error: "Faltan campos requeridos" }, { status: 400 });
     }
 
-    const e = email?.trim() ?? "";
+    const e = email.trim();
     const t = tipo.trim();
     const i = idea.trim();
 
@@ -27,22 +27,20 @@ export async function onRequestPost({ request, env }: { request: Request; env: E
     const notify = env.CONTACT_NOTIFY_EMAIL ?? "info@diamadmin.com";
     const testTo = env.MAIL_TEST_TO?.trim() || null;
 
-    if (e) {
-      await sendEmail({
-        apiKey: env.BREVO_API_KEY,
-        from,
-        to: testTo ?? e,
-        subject: "Sugerencia recibida · Diamadmin",
-        html: sugerenciaEmailHtml(t, i),
-      });
-    }
+    await sendEmail({
+      apiKey: env.BREVO_API_KEY,
+      from,
+      to: testTo ?? e,
+      subject: "Sugerencia recibida · Diamadmin",
+      html: sugerenciaEmailHtml(t, i),
+    });
 
     await sendEmail({
       apiKey: env.BREVO_API_KEY,
       from,
       to: testTo ?? notify,
-      replyTo: e || undefined,
-      subject: `[Sugerencia] ${t}${e ? ` — ${e}` : " (anónimo)"}`,
+      replyTo: e,
+      subject: `[Sugerencia] ${t} — ${e}`,
       html: adminSugerenciaEmailHtml(e, t, i),
     });
 

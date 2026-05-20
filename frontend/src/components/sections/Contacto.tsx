@@ -237,8 +237,8 @@ export default function Contacto() {
                 {tab === "sugerencia" && (
                   <>
                     <div>
-                      <label className={labelCls}>Tu email (opcional)</label>
-                      <input type="email" className={inputCls} placeholder="correo@empresa.com"
+                      <label className={labelCls}>Tu email *</label>
+                      <input required type="email" className={inputCls} placeholder="correo@empresa.com"
                         value={sEmail} onChange={(e) => setSEmail(e.target.value)} />
                     </div>
                     <div>
