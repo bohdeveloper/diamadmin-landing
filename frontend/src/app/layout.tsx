@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CookieBanner from "@/components/layout/CookieBanner";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -283,6 +284,7 @@ export default function RootLayout({
           }}
         />
 
+        <CookieBanner />
         <Navbar />
         <main>{children}</main>
         <Footer />
