@@ -2,6 +2,7 @@ import { sendEmail, isInBrevoList } from "../_lib/brevo";
 import { hmacHex } from "../_lib/security";
 import { buildConfirmUrl, buildUnsubscribeUrl } from "../_lib/urls";
 import { confirmacionHtml, yaSubscritoHtml } from "../_lib/emails";
+import { isValidEmail, checkLength, LIMITS } from "../_lib/validate";
 
 interface Env {
   BREVO_API_KEY: string;
@@ -10,8 +11,6 @@ interface Env {
   MAIL_FROM: string;
   MAIL_TEST_TO?: string;
 }
-
-const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,255}\.[^\s@]{2,}$/;
 
 export async function onRequestPost({ request, env }: { request: Request; env: Env }): Promise<Response> {
   try {
@@ -27,8 +26,8 @@ export async function onRequestPost({ request, env }: { request: Request; env: E
     const n = nombre.trim();
     const e = email.trim().toLowerCase();
 
-    if (!EMAIL_RE.test(e))    return Response.json({ error: "Email inválido" }, { status: 400 });
-    if (n.length > 100)       return Response.json({ error: "Nombre demasiado largo" }, { status: 400 });
+    if (!isValidEmail(e))              return Response.json({ error: "Email inválido" }, { status: 400 });
+    if (!checkLength(n, LIMITS.nombre)) return Response.json({ error: "Nombre demasiado largo" }, { status: 400 });
 
     const from    = env.MAIL_FROM ?? "Diamadmin <info@diamadmin.com>";
     const testTo  = env.MAIL_TEST_TO?.trim() || null;

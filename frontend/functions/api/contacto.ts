@@ -1,5 +1,6 @@
 import { sendEmail } from "../_lib/brevo";
 import { contactoEmailHtml, adminContactoEmailHtml } from "../_lib/emails";
+import { isValidEmail, checkLength, LIMITS } from "../_lib/validate";
 
 interface Env {
   BREVO_API_KEY: string;
@@ -21,9 +22,15 @@ export async function onRequestPost({ request, env }: { request: Request; env: E
 
     const n  = nombre.trim();
     const em = empresa?.trim() ?? "";
-    const e  = email.trim();
+    const e  = email.trim().toLowerCase();
     const s  = sector?.trim() ?? "";
     const m  = mensaje.trim();
+
+    if (!isValidEmail(e))             return Response.json({ error: "Email inválido" }, { status: 400 });
+    if (!checkLength(n,  LIMITS.nombre))  return Response.json({ error: "Nombre demasiado largo" },   { status: 400 });
+    if (!checkLength(em, LIMITS.empresa)) return Response.json({ error: "Empresa demasiado larga" },  { status: 400 });
+    if (!checkLength(s,  LIMITS.sector))  return Response.json({ error: "Sector demasiado largo" },   { status: 400 });
+    if (!checkLength(m,  LIMITS.mensaje)) return Response.json({ error: "Mensaje demasiado largo" },  { status: 400 });
 
     const from   = env.MAIL_FROM ?? "Diamadmin <info@diamadmin.com>";
     const notify = env.CONTACT_NOTIFY_EMAIL ?? "info@diamadmin.com";
