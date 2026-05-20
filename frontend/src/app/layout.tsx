@@ -66,8 +66,18 @@ export const metadata = {
     },
   },
 
+  manifest: "/favicon/site.webmanifest",
+
   icons: {
-    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    other: [
+      { rel: "mask-icon", url: "/favicon/favicon-32x32.png", color: "#1B75BB" },
+    ],
   },
 
   /* ---------- OPEN GRAPH ---------- */
@@ -96,6 +106,7 @@ export const metadata = {
     description:
       "Controla el stock, organiza tu negocio y gestiona cada área desde un único panel. Diamadmin: software de gestión modular para pymes.",
     images: ["/images/diamadmin-og.png"],
+    creator: "@diamadmin",
   },
 };
 
@@ -247,11 +258,7 @@ export default function RootLayout({
               "url": "https://www.diamadmin.com",
               "description":
                 "Software de administración empresarial modular para pymes. Controla tu negocio, gestiona el stock y digitaliza operaciones con Diamadmin.",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": "https://www.diamadmin.com/?q={search_term_string}",
-                "query-input": "required name=search_term_string",
-              },
+              "inLanguage": "es-ES",
             }),
           }}
         />
