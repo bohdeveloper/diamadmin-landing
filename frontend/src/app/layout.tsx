@@ -91,9 +91,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "/images/diamadmin-og.png",
-        width: 1200,
-        height: 630,
+        url: "/images/logo_diamadmin.png",
         alt: "Diamadmin - Aplicación de administración empresarial para pymes",
       },
     ],
@@ -105,7 +103,7 @@ export const metadata = {
     title: "Diamadmin · Administración Empresarial para Pymes",
     description:
       "Controla el stock, organiza tu negocio y gestiona cada área desde un único panel. Diamadmin: software de gestión modular para pymes.",
-    images: ["/images/diamadmin-og.png"],
+    images: ["/images/logo_diamadmin.png"],
     creator: "@diamadmin",
   },
 };
