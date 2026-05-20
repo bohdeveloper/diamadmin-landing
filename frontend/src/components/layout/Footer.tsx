@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,8 +7,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
 
         {/* Brand */}
-        <div className="flex items-center gap-2">
-          <span className="text-[#1B75BB] font-bold text-lg">Diamadmin</span>
+        <div className="flex items-center">
+          <Image
+            src="/images/logo_diamadmin.png"
+            alt="Diamadmin"
+            width={140}
+            height={40}
+            className="h-8 w-auto"
+          />
         </div>
 
         {/* Credits */}
