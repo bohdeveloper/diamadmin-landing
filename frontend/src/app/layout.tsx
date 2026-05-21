@@ -287,13 +287,12 @@ export default function RootLayout({
         {/* ============================
            UMAMI ANALYTICS
            Sin cookies · compatible RGPD · no requiere banner de consentimiento
-           Crear sitio en umami.is para diamadmin.com y reemplazar data-website-id
         ============================ */}
-        {/* <script
+        <script
           defer
           src="https://cloud.umami.is/script.js"
-          data-website-id="PENDIENTE"
-        /> */}
+          data-website-id="ef92d61a-ea38-4566-862c-14d2d516774b"
+        />
 
         <CookieBanner />
         <Navbar />

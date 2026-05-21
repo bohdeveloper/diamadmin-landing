@@ -60,7 +60,7 @@
 **Objetivo:** medir qué funciona, mejorar la conversión y dejar la landing lista de forma definitiva.
 
 ### Analytics y métricas
-- [x] Analytics de privacidad sin cookies (Umami — pendiente crear website ID en umami.is para diamadmin.com)
+- [x] Analytics de privacidad sin cookies (Umami — `ef92d61a-ea38-4566-862c-14d2d516774b`)
 - [ ] Tracking de eventos clave: clic en CTA, envíos de formulario, scroll depth *(pospuesto a alpha)*
 - [ ] Estrategia de precios revisada → sección de pricing definitiva y activa *(pospuesto a alpha)*
 - [ ] A/B testing básico en el headline principal *(pospuesto a alpha)*
