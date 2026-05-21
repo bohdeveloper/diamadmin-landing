@@ -6,10 +6,11 @@ import ThemeToggle from "./ThemeToggle";
 const links = [
   { href: "#producto", label: "Producto" },
   { href: "#modulos", label: "Módulos" },
-  { href: "#como-funciona", label: "Cómo funciona" },
-  // { href: "#subscripción", label: "Precios" },
   { href: "#quienes-somos", label: "Nosotros" },
+  { href: "#como-funciona", label: "Cómo funciona" },
+  { href: "#lista-espera", label: "Lista de espera" },
   { href: "#contacto", label: "Contacto" },
+  // { href: "#subscripción", label: "Precios" },
 ];
 
 export default function Navbar() {
