@@ -46,12 +46,13 @@ export async function isInBrevoList(apiKey: string, listId: number, email: strin
 
 export async function addToBrevoList(apiKey: string, listId: number, email: string, nombre: string): Promise<void> {
   const [firstName, ...rest] = nombre.split(" ");
-  await brevoReq(apiKey, "/contacts", "POST", {
+  const res = await brevoReq(apiKey, "/contacts", "POST", {
     email,
     listIds: [listId],
     updateEnabled: true,
     attributes: { FIRSTNAME: firstName, LASTNAME: rest.join(" ") || undefined },
   });
+  if (!res.ok) throw new Error(`Brevo contacts ${res.status}: ${await res.text()}`);
 }
 
 export async function removeFromBrevoList(apiKey: string, listId: number, email: string): Promise<boolean> {

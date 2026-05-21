@@ -46,11 +46,14 @@ export async function onRequestPost({ request, env }: { request: Request; env: E
     const TEST_TO = env.MAIL_TEST_TO?.trim() || null;
     const listId = parseInt(env.BREVO_LIST_ID ?? "0");
 
-    // Añadir a la lista (no bloqueante)
+    // Añadir a la lista de Brevo
     if (listId > 0) {
-      addToBrevoList(env.BREVO_API_KEY, listId, e, n).catch((err) =>
-        console.error("[lista-espera] brevo error:", err)
-      );
+      try {
+        await addToBrevoList(env.BREVO_API_KEY, listId, e, n);
+      } catch (err) {
+        console.error("[lista-espera] brevo list error:", err);
+        return new Response(JSON.stringify({ error: "Error al registrar tu solicitud" }), { status: 500, headers });
+      }
     }
 
     // Email de confirmación al usuario
