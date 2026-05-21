@@ -55,24 +55,29 @@
 
 ---
 
-## FASE 1 — Landing: métricas, conversión y calidad ⏳ PENDIENTE
+## FASE 1 — Landing: métricas, conversión y calidad ✅ COMPLETADA
 
 **Objetivo:** medir qué funciona, mejorar la conversión y dejar la landing lista de forma definitiva.
 
 ### Analytics y métricas
-- [ ] Analytics de privacidad sin cookies (Plausible o Umami)
-- [ ] Tracking de eventos clave: clic en CTA, envíos de formulario, scroll depth
-- [ ] Estrategia de precios revisada → sección de pricing definitiva y activa
-- [ ] A/B testing básico en el headline principal
+- [x] Analytics de privacidad sin cookies (Umami — pendiente crear website ID en umami.is para diamadmin.com)
+- [ ] Tracking de eventos clave: clic en CTA, envíos de formulario, scroll depth *(pospuesto a alpha)*
+- [ ] Estrategia de precios revisada → sección de pricing definitiva y activa *(pospuesto a alpha)*
+- [ ] A/B testing básico en el headline principal *(pospuesto a alpha)*
 
 ### Páginas y flujos
-- [ ] Página de confirmación de suscripción con CTA claro (`/confirmar`)
-- [ ] Página de baja confirmada con opción de reactivar (`/baja`)
-- [ ] Páginas de error personalizadas (`/404`, `/500`)
+- [x] Página de confirmación de suscripción con CTA claro (`/confirmar`)
+- [x] Página de baja confirmada con opción de reactivar (`/baja`)
+- [x] Páginas de error personalizadas (`/404`, `/500`)
+- [x] `confirm.ts` y `unsubscribe.ts` redirigen a páginas Next.js (antes devolvían HTML inline)
+
+### Captación anticipada
+- [x] Sección de lista de espera con formulario (`#lista-espera`)
+- [x] Endpoint `/api/lista-espera` con email de confirmación (Brevo) y alta en lista de contactos
 
 ### Calidad y tests
-- [ ] Ampliar cobertura de tests: handlers de contacto, sugerencias y newsletter
-- [ ] Revisión de accesibilidad (contraste, aria-labels, navegación por teclado)
+- [ ] Ampliar cobertura de tests: handlers de contacto, sugerencias, newsletter y lista de espera *(pospuesto a alpha)*
+- [ ] Revisión de accesibilidad *(pospuesto a alpha)*
 
 ---
 
@@ -93,12 +98,12 @@
 
 **Objetivo:** enlazar la landing con `app.diamadmin.com` y gestionar el acceso a la alpha.
 
-- [ ] CTA principal apunta a `app.diamadmin.com` (registro / lista de espera)
-- [ ] Sistema de lista de espera con invitaciones por correo
-- [ ] Login / registro desde la landing redirige a la app
-- [ ] Estado del sistema visible (uptime, versión actual)
-- [ ] Notas de versión / changelog público
-- [ ] Documentación básica de usuario (`/docs`)
+- [x] Sistema de lista de espera con formulario y email de confirmación (`#lista-espera`)
+- [ ] CTA principal apunta a `app.diamadmin.com` (registro / lista de espera) *(cuando haya alpha)*
+- [ ] Login / registro desde la landing redirige a la app *(cuando haya alpha)*
+- [ ] Estado del sistema visible (uptime, versión actual) *(cuando haya alpha)*
+- [ ] Notas de versión / changelog público *(cuando haya alpha)*
+- [ ] Documentación básica de usuario (`/docs`) *(cuando haya alpha)*
 
 ---
 

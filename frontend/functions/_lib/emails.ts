@@ -495,6 +495,53 @@ export function bajaConfirmadaEmailHtml(deleteDataUrl?: string): string {
   });
 }
 
+/* ── Lista de espera ── */
+
+export function listaEsperaEmailHtml(nombre: string): string {
+  const n = esc(nombre);
+  return userEmail({
+    emoji: "🚀",
+    title: "¡Estás en la lista!",
+    subtitle: "Serás de los primeros en acceder a Diamadmin",
+    body: `
+      <p style="margin:0 0 6px;font-size:20px;font-weight:800;color:#0A2540;">Hola, ${n} 👋</p>
+      <p style="margin:0 0 24px;font-size:15px;color:#607D8B;line-height:1.7;">
+        Te hemos apuntado en la lista de espera de Diamadmin. Cuando la plataforma esté lista para su acceso beta,
+        tú serás de los primeros en recibir tu invitación.
+      </p>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+        <tr>
+          <td style="background:#EAF4FB;border-left:4px solid #3DB5E6;border-radius:0 10px 10px 0;padding:18px 22px;">
+            <p style="margin:0 0 8px;font-size:11px;font-weight:700;color:#1B75BB;letter-spacing:2px;text-transform:uppercase;">¿Qué viene?</p>
+            <p style="margin:0;font-size:14px;color:#455A64;line-height:1.65;">Control de stock · Facturación · Gestión de equipo · Panel de operaciones · Módulos sectoriales</p>
+          </td>
+        </tr>
+      </table>
+      <p style="margin:0;font-size:14px;color:#607D8B;line-height:1.7;">
+        Mientras tanto, si tienes sugerencias o quieres contarnos algo, escríbenos a
+        <a href="mailto:info@diamadmin.com" style="color:#3DB5E6;text-decoration:none;">info@diamadmin.com</a>.
+      </p>`,
+    cta: { url: SITE, label: "Ver la plataforma" },
+    footerNote: `Recibiste este email porque te apuntaste a la lista de espera en <a href="${SITE}" style="color:#3DB5E6;text-decoration:none;">diamadmin.com</a>`,
+  });
+}
+
+export function adminListaEsperaEmailHtml(nombre: string, email: string): string {
+  const n = esc(nombre);
+  const e = esc(email);
+  return adminEmail({
+    bannerColor: "linear-gradient(135deg,#1B75BB,#3DB5E6)",
+    bannerEmoji: "🚀",
+    bannerText: "Nueva inscripción en lista de espera",
+    body: `
+      <p style="margin:0 0 14px;font-size:11px;font-weight:700;color:#1B75BB;letter-spacing:2px;text-transform:uppercase;">Nuevo registro</p>
+      ${infoBox([
+        ["Nombre", n],
+        ["Email",  `<a href="mailto:${e}" style="color:#3DB5E6;text-decoration:none;">${e}</a>`],
+      ])}`,
+  });
+}
+
 /* ── Admin: newsletter ── */
 
 export function adminNewsletterEmailHtml(nombre: string, email: string): string {
