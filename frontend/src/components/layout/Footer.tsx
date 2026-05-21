@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -8,11 +7,10 @@ export default function Footer() {
 
         {/* Brand */}
         <div className="flex items-center">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/images/logo_diamadmin.png"
             alt="Diamadmin"
-            width={140}
-            height={40}
             className="h-8 w-auto"
           />
         </div>
