@@ -1,6 +1,2 @@
-# Redirige www a no-www
-https://www.diamadmin.com/* https://diamadmin.com/:splat 301
-
-# Evita redirecciones innecesarias
-/sitemap.xml /sitemap.xml 200
-/robots.txt /robots.txt 200
+# Redirige apex (sin www) a www — canónico es https://www.diamadmin.com
+https://diamadmin.com/* https://www.diamadmin.com/:splat 301
