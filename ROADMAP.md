@@ -25,12 +25,16 @@
 - [x] Favicon, Apple Touch Icon y Web Manifest completos
 - [x] Canonical URLs en todas las páginas
 - [x] Meta keywords, description y title templates
+- [x] Redirección apex → www (`_redirects`, 301 permanente)
 
 ### Email y captación
 - [x] Formulario de contacto con validación, honeypot y envío real (Brevo SMTP)
 - [x] Formulario de sugerencias funcional
 - [x] Newsletter con double opt-in: confirmación por email → Brevo Contact List
 - [x] Gestión de bajas con token HMAC firmado
+- [x] Derecho al olvido: endpoint `/api/delete-data` elimina contacto de Brevo completamente
+- [x] Endpoint `/api/broadcast` para envío de newsletter a todos los suscriptores (requiere `BROADCAST_SECRET`)
+- [x] 12 plantillas cápsula de newsletter (serie educativa en `capsulas/`)
 - [x] Notificaciones al admin en cada acción
 - [x] Templates de email con diseño consistente y branding Diamadmin
 - [x] Validación estricta de inputs en todos los handlers (longitud, formato, honeypot)

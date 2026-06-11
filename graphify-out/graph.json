@@ -2380,7 +2380,7 @@
       "label": "Email y captaci\u00f3n",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "roadmap_email_y_captaci\u00f3n",
       "community": 30,
@@ -2390,7 +2390,7 @@
       "label": "Legal y cumplimiento",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L38",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "roadmap_legal_y_cumplimiento",
       "community": 30,
@@ -2400,7 +2400,7 @@
       "label": "Seguridad",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L45",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "roadmap_seguridad",
       "community": 30,
@@ -2410,7 +2410,7 @@
       "label": "Calidad",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L54",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "roadmap_calidad",
       "community": 30,
@@ -2420,7 +2420,7 @@
       "label": "FASE 1 \u2014 Landing: m\u00e9tricas, conversi\u00f3n y calidad \u2705 COMPLETADA",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L63",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "roadmap_fase_1_landing_m\u00e9tricas_conversi\u00f3n_y_calidad_completada",
       "community": 30,
@@ -2430,7 +2430,7 @@
       "label": "Analytics y m\u00e9tricas",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L67",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "roadmap_analytics_y_m\u00e9tricas",
       "community": 30,
@@ -2440,7 +2440,7 @@
       "label": "P\u00e1ginas y flujos",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L73",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "roadmap_p\u00e1ginas_y_flujos",
       "community": 30,
@@ -2450,7 +2450,7 @@
       "label": "Captaci\u00f3n anticipada",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L79",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "roadmap_captaci\u00f3n_anticipada",
       "community": 30,
@@ -2460,7 +2460,7 @@
       "label": "Calidad y tests",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L83",
+      "source_location": "L87",
       "_origin": "ast",
       "id": "roadmap_calidad_y_tests",
       "community": 30,
@@ -2470,7 +2470,7 @@
       "label": "FASE 2 \u2014 Landing: contenido SEO y autoridad \u23f3 PENDIENTE",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L89",
+      "source_location": "L93",
       "_origin": "ast",
       "id": "roadmap_fase_2_landing_contenido_seo_y_autoridad_pendiente",
       "community": 30,
@@ -2480,7 +2480,7 @@
       "label": "FASE 3 \u2014 Landing: conversi\u00f3n hacia la app \u23f3 PENDIENTE",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L102",
+      "source_location": "L106",
       "_origin": "ast",
       "id": "roadmap_fase_3_landing_conversi\u00f3n_hacia_la_app_pendiente",
       "community": 30,
@@ -7603,9 +7603,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap",
-      "target": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
-      "confidence_score": 1.0
+      "target": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing"
     },
     {
       "relation": "contains",
@@ -7613,9 +7613,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
-      "target": "roadmap_fase_0_landing_y_validaci\u00f3n_completada",
-      "confidence_score": 1.0
+      "target": "roadmap_fase_0_landing_y_validaci\u00f3n_completada"
     },
     {
       "relation": "contains",
@@ -7623,9 +7623,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L63",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
-      "target": "roadmap_fase_1_landing_m\u00e9tricas_conversi\u00f3n_y_calidad_completada",
-      "confidence_score": 1.0
+      "target": "roadmap_fase_1_landing_m\u00e9tricas_conversi\u00f3n_y_calidad_completada"
     },
     {
       "relation": "contains",
@@ -7633,9 +7633,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
-      "target": "roadmap_fase_2_landing_contenido_seo_y_autoridad_pendiente",
-      "confidence_score": 1.0
+      "target": "roadmap_fase_2_landing_contenido_seo_y_autoridad_pendiente"
     },
     {
       "relation": "contains",
@@ -7643,9 +7643,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L102",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
-      "target": "roadmap_fase_3_landing_conversi\u00f3n_hacia_la_app_pendiente",
-      "confidence_score": 1.0
+      "target": "roadmap_fase_3_landing_conversi\u00f3n_hacia_la_app_pendiente"
     },
     {
       "relation": "contains",
@@ -8627,6 +8627,5 @@
       "confidence_score": 0.85,
       "source_file": "capsulas/capsula-hosteleria.html"
     }
-  ],
-  "built_at_commit": "808f67d67ef051aa30feb718bf114621d93809e7"
+  ]
 }

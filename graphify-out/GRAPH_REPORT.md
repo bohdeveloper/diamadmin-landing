@@ -1,18 +1,13 @@
 # Graph Report - diamadmin-landing  (2026-06-11)
 
 ## Corpus Check
-- 56 files · ~69,387 words
+- 56 files · ~69,433 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 - 303 nodes · 507 edges · 34 communities (21 shown, 13 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
-
-## Graph Freshness
-- Built from commit: `808f67d6`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Cloudflare API Routes|Cloudflare API Routes]]

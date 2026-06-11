@@ -1,16 +1,16 @@
 # Graph Report - diamadmin-landing  (2026-06-11)
 
 ## Corpus Check
-- 56 files · ~70,029 words
+- 56 files · ~69,387 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 312 nodes · 516 edges · 34 communities (21 shown, 13 thin omitted)
+- 303 nodes · 507 edges · 34 communities (21 shown, 13 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.88)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `50a4d4ca`
+- Built from commit: `808f67d6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,7 +52,7 @@
 7. `hmacHex()` - 11 edges
 8. `checkLength()` - 10 edges
 9. `onRequestGet()` - 10 edges
-10. `🗺️ ROADMAP — EVOLUCIÓN DE DIAMADMIN` - 10 edges
+10. `ROADMAP — Evolución de Diamadmin` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Modular Approach — Start Small, Grow Incrementally` --semantically_similar_to--> `Modular ERP Design Philosophy for SMEs`  [INFERRED] [semantically similar]
@@ -77,8 +77,8 @@
 ## Communities (34 total, 13 thin omitted)
 
 ### Community 0 - "Cloudflare API Routes"
-Cohesion: 0.17
-Nodes (21): Env, onRequestPost(), timingSafeCompare(), Env, onRequestGet(), Env, onRequestGet(), page() (+13 more)
+Cohesion: 0.18
+Nodes (24): Env, onRequestPost(), timingSafeCompare(), Env, onRequestGet(), Env, onRequestGet(), page() (+16 more)
 
 ### Community 1 - "Email Capsulas Content"
 Cohesion: 0.09
@@ -117,19 +117,19 @@ Cohesion: 1.00
 Nodes (3): Android Chrome 192x192 Favicon (Diamond Logo), Brand Identity — Diamadmin, Diamond Logo Icon
 
 ### Community 30 - "Community 30"
-Cohesion: 0.08
-Nodes (24): Analytics y métricas, Autenticación (bloquea la alpha), Backend (Spring Boot + PostgreSQL) — completado, Calidad, Calidad y tests, Captación anticipada, Email y captación, FASE 0 — Landing y validación ✅ COMPLETADA (+16 more)
+Cohesion: 0.12
+Nodes (15): Analytics y métricas, Calidad, Calidad y tests, Captación anticipada, Email y captación, FASE 0 — Landing y validación ✅ COMPLETADA, FASE 1 — Landing: métricas, conversión y calidad ✅ COMPLETADA, FASE 2 — Landing: contenido SEO y autoridad ⏳ PENDIENTE (+7 more)
 
 ### Community 31 - "Community 31"
-Cohesion: 0.32
-Nodes (16): Env, onRequestPost(), Env, onRequestPost(), Env, onRequestPost(), Env, onRequestPost() (+8 more)
+Cohesion: 0.33
+Nodes (13): Env, onRequestPost(), Env, onRequestPost(), Env, Env, onRequestPost(), checkLength() (+5 more)
 
 ### Community 32 - "Community 32"
 Cohesion: 0.18
 Nodes (10): 1. Tecnologías utilizadas, 2. Arquitectura actual, 3. Relación con la aplicación real, 4. Estructura del proyecto, 5. Estado actual del proyecto, 6. Instalación y desarrollo local, ⚙️ Aplicación real (otro repo), Diamadmin – Landing oficial (+2 more)
 
 ## Knowledge Gaps
-- **110 isolated node(s):** `eslintConfig`, `UserOpts`, `AdminOpts`, `BENEFICIOS`, `SECURITY_HEADERS` (+105 more)
+- **102 isolated node(s):** `eslintConfig`, `UserOpts`, `AdminOpts`, `BENEFICIOS`, `SECURITY_HEADERS` (+97 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -139,7 +139,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `ROADMAP — Evolución de Diamadmin` connect `Email Capsulas Content` to `Project Documentation`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `UserOpts`, `AdminOpts` to the rest of the system?**
-  _110 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _102 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Email Capsulas Content` be split into smaller, more focused modules?**
   _Cohesion score 0.0873015873015873 - nodes in this community are weakly interconnected._
 - **Should `Landing Page Sections` be split into smaller, more focused modules?**
