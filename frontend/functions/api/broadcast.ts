@@ -9,10 +9,22 @@ interface Env {
   MAIL_FROM: string;
 }
 
+const MAX_SUBJECT = 200;
+const MAX_HTML    = 100_000; // 100 KB
+
+// Timing-safe string comparison to prevent timing-based secret enumeration
+function timingSafeCompare(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+  let diff = 0;
+  for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return diff === 0;
+}
+
 export async function onRequestPost({ request, env }: { request: Request; env: Env }): Promise<Response> {
   const secret = env.BROADCAST_SECRET;
   const auth   = request.headers.get("Authorization") ?? "";
-  if (!secret || auth !== `Bearer ${secret}`) {
+
+  if (!secret || !timingSafeCompare(auth, `Bearer ${secret}`)) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 
@@ -26,6 +38,13 @@ export async function onRequestPost({ request, env }: { request: Request; env: E
 
     if (!subject?.trim() || !html?.trim()) {
       return Response.json({ error: "Faltan subject y html" }, { status: 400 });
+    }
+
+    if (subject.trim().length > MAX_SUBJECT) {
+      return Response.json({ error: "Subject demasiado largo" }, { status: 400 });
+    }
+    if (html.trim().length > MAX_HTML) {
+      return Response.json({ error: "HTML demasiado largo" }, { status: 400 });
     }
 
     const contacts = await getBrevoListContacts(env.BREVO_API_KEY, env.BREVO_LIST_ID);

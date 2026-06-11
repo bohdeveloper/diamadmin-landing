@@ -1,5 +1,6 @@
 import { deleteFromBrevo } from "../_lib/brevo";
 import { verifyHmac } from "../_lib/security";
+import { isValidEmail } from "../_lib/validate";
 
 interface Env {
   BREVO_API_KEY: string;
@@ -49,13 +50,15 @@ export async function onRequestGet({ request, env }: { request: Request; env: En
 
   if (!email || !token) return page(false);
 
-  const decodedEmail = decodeURIComponent(email).toLowerCase();
-  const secret = env.BROADCAST_SECRET;
+  const decodedEmail = decodeURIComponent(email).toLowerCase().trim();
 
-  if (secret) {
-    const valid = await verifyHmac(decodedEmail, token, secret);
-    if (!valid) return page(false);
-  }
+  if (!isValidEmail(decodedEmail)) return page(false);
+
+  const secret = env.BROADCAST_SECRET;
+  if (!secret) return page(false);
+
+  const valid = await verifyHmac(decodedEmail, token, secret);
+  if (!valid) return page(false);
 
   const ok = await deleteFromBrevo(env.BREVO_API_KEY, decodedEmail).catch(() => false);
   return page(ok);

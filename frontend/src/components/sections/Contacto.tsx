@@ -197,17 +197,20 @@ export default function Contacto() {
                       <div>
                         <label className={labelCls}>Nombre *</label>
                         <input required className={inputCls} placeholder="Tu nombre"
+                          maxLength={100}
                           value={cNombre} onChange={(e) => setCNombre(e.target.value)} />
                       </div>
                       <div>
                         <label className={labelCls}>Empresa</label>
                         <input className={inputCls} placeholder="Tu empresa"
+                          maxLength={200}
                           value={cEmpresa} onChange={(e) => setCEmpresa(e.target.value)} />
                       </div>
                     </div>
                     <div>
                       <label className={labelCls}>Email *</label>
                       <input required type="email" className={inputCls} placeholder="correo@empresa.com"
+                        maxLength={320}
                         value={cEmail} onChange={(e) => setCEmail(e.target.value)} />
                     </div>
                     <div>
@@ -228,6 +231,7 @@ export default function Contacto() {
                       <label className={labelCls}>Mensaje *</label>
                       <textarea required rows={4} className={inputCls + " resize-none"}
                         placeholder="Cuéntanos tu caso..."
+                        maxLength={2000}
                         value={cMensaje} onChange={(e) => setCMensaje(e.target.value)} />
                     </div>
                   </>
@@ -239,6 +243,7 @@ export default function Contacto() {
                     <div>
                       <label className={labelCls}>Tu email *</label>
                       <input required type="email" className={inputCls} placeholder="correo@empresa.com"
+                        maxLength={320}
                         value={sEmail} onChange={(e) => setSEmail(e.target.value)} />
                     </div>
                     <div>
@@ -256,6 +261,7 @@ export default function Contacto() {
                       <label className={labelCls}>Tu idea *</label>
                       <textarea required rows={5} className={inputCls + " resize-none"}
                         placeholder="Describe tu sugerencia con detalle..."
+                        maxLength={2000}
                         value={sIdea} onChange={(e) => setSIdea(e.target.value)} />
                     </div>
                   </>
@@ -276,11 +282,13 @@ export default function Contacto() {
                     <div>
                       <label className={labelCls}>Nombre *</label>
                       <input required className={inputCls} placeholder="Tu nombre"
+                        maxLength={100}
                         value={nNombre} onChange={(e) => setNNombre(e.target.value)} />
                     </div>
                     <div>
                       <label className={labelCls}>Email *</label>
                       <input required type="email" className={inputCls} placeholder="correo@empresa.com"
+                        maxLength={320}
                         value={nEmail} onChange={(e) => setNEmail(e.target.value)} />
                     </div>
                   </>

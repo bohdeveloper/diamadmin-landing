@@ -1,15 +1,21 @@
 import { sendEmail } from "../_lib/brevo";
 import { sugerenciaEmailHtml, adminSugerenciaEmailHtml } from "../_lib/emails";
 import { isValidEmail, checkLength, LIMITS } from "../_lib/validate";
+import { rateLimit, getClientIp, type KVBinding } from "../_shared/rateLimit";
 
 interface Env {
   BREVO_API_KEY: string;
   MAIL_FROM: string;
   CONTACT_NOTIFY_EMAIL: string;
   MAIL_TEST_TO?: string;
+  RATE_LIMIT_KV: KVBinding;
 }
 
 export async function onRequestPost({ request, env }: { request: Request; env: Env }): Promise<Response> {
+  const ip = getClientIp(request);
+  const { ok } = await rateLimit(env.RATE_LIMIT_KV, ip, "sugerencia", 5);
+  if (!ok) return Response.json({ error: "Demasiadas peticiones. Inténtalo en unos minutos." }, { status: 429 });
+
   try {
     const body = await request.json() as Record<string, string>;
     const { email, tipo, idea, website } = body;
@@ -24,9 +30,9 @@ export async function onRequestPost({ request, env }: { request: Request; env: E
     const t = tipo.trim();
     const i = idea.trim();
 
-    if (!isValidEmail(e))             return Response.json({ error: "Email inválido" }, { status: 400 });
-    if (!checkLength(t, LIMITS.tipo))  return Response.json({ error: "Tipo demasiado largo" },  { status: 400 });
-    if (!checkLength(i, LIMITS.idea))  return Response.json({ error: "Idea demasiado larga" },  { status: 400 });
+    if (!isValidEmail(e))            return Response.json({ error: "Email inválido" },        { status: 400 });
+    if (!checkLength(t, LIMITS.tipo)) return Response.json({ error: "Tipo demasiado largo" }, { status: 400 });
+    if (!checkLength(i, LIMITS.idea)) return Response.json({ error: "Idea demasiado larga" }, { status: 400 });
 
     const from   = env.MAIL_FROM ?? "Diamadmin <info@diamadmin.com>";
     const notify = env.CONTACT_NOTIFY_EMAIL ?? "info@diamadmin.com";

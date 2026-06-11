@@ -1,13 +1,18 @@
-# Graph Report - .  (2026-06-11)
+# Graph Report - diamadmin-landing  (2026-06-11)
 
 ## Corpus Check
-- 75 files · ~69,613 words
+- 56 files · ~70,029 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 269 nodes · 433 edges · 30 communities (18 shown, 12 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.88)
-- Token cost: 1,920 input · 640 output
+- 312 nodes · 516 edges · 34 communities (21 shown, 13 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 31 edges (avg confidence: 0.88)
+- Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `50a4d4ca`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Cloudflare API Routes|Cloudflare API Routes]]
@@ -32,18 +37,22 @@
 - [[_COMMUNITY_Next.js Config|Next.js Config]]
 - [[_COMMUNITY_Apple Touch Icon|Apple Touch Icon]]
 - [[_COMMUNITY_App Icon|App Icon]]
+- [[_COMMUNITY_Community 30|Community 30]]
+- [[_COMMUNITY_Community 31|Community 31]]
+- [[_COMMUNITY_Community 32|Community 32]]
+- [[_COMMUNITY_Community 33|Community 33]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `compilerOptions` - 17 edges
 2. `sendEmail()` - 16 edges
-3. `Cápsula Email Template Design Pattern (Diamadmin branding)` - 12 edges
-4. `esc()` - 11 edges
-5. `hmacHex()` - 11 edges
-6. `onRequestPost()` - 10 edges
-7. `ROADMAP — Evolución de Diamadmin` - 10 edges
-8. `userEmail()` - 9 edges
-9. `verifyHmac()` - 9 edges
-10. `onRequestGet()` - 9 edges
+3. `isValidEmail()` - 16 edges
+4. `onRequestPost()` - 12 edges
+5. `Cápsula Email Template Design Pattern (Diamadmin branding)` - 12 edges
+6. `esc()` - 11 edges
+7. `hmacHex()` - 11 edges
+8. `checkLength()` - 10 edges
+9. `onRequestGet()` - 10 edges
+10. `🗺️ ROADMAP — EVOLUCIÓN DE DIAMADMIN` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Modular Approach — Start Small, Grow Incrementally` --semantically_similar_to--> `Modular ERP Design Philosophy for SMEs`  [INFERRED] [semantically similar]
@@ -65,11 +74,11 @@
 - **Core ERP Modules — Stock, Equipo, Finanzas, Integraciones** — concept_modulo_stock, concept_modulo_equipo, concept_modulo_finanzas, concept_integraciones [EXTRACTED 1.00]
 - **Sector-Specific Cápsulas — Hostelería and Retail** — capsulas_hosteleria, capsulas_retail, concept_sector_hosteleria, concept_sector_retail [INFERRED 0.85]
 
-## Communities (30 total, 12 thin omitted)
+## Communities (34 total, 13 thin omitted)
 
 ### Community 0 - "Cloudflare API Routes"
-Cohesion: 0.12
-Nodes (33): Env, onRequestPost(), Env, onRequestGet(), Env, onRequestPost(), Env, onRequestGet() (+25 more)
+Cohesion: 0.17
+Nodes (21): Env, onRequestPost(), timingSafeCompare(), Env, onRequestGet(), Env, onRequestGet(), page() (+13 more)
 
 ### Community 1 - "Email Capsulas Content"
 Cohesion: 0.09
@@ -107,25 +116,37 @@ Nodes (7): CLAUDE.md — Graphify Instructions, app.diamadmin.com — Angular + 
 Cohesion: 1.00
 Nodes (3): Android Chrome 192x192 Favicon (Diamond Logo), Brand Identity — Diamadmin, Diamond Logo Icon
 
+### Community 30 - "Community 30"
+Cohesion: 0.08
+Nodes (24): Analytics y métricas, Autenticación (bloquea la alpha), Backend (Spring Boot + PostgreSQL) — completado, Calidad, Calidad y tests, Captación anticipada, Email y captación, FASE 0 — Landing y validación ✅ COMPLETADA (+16 more)
+
+### Community 31 - "Community 31"
+Cohesion: 0.32
+Nodes (16): Env, onRequestPost(), Env, onRequestPost(), Env, onRequestPost(), Env, onRequestPost() (+8 more)
+
+### Community 32 - "Community 32"
+Cohesion: 0.18
+Nodes (10): 1. Tecnologías utilizadas, 2. Arquitectura actual, 3. Relación con la aplicación real, 4. Estructura del proyecto, 5. Estado actual del proyecto, 6. Instalación y desarrollo local, ⚙️ Aplicación real (otro repo), Diamadmin – Landing oficial (+2 more)
+
 ## Knowledge Gaps
-- **86 isolated node(s):** `eslintConfig`, `UserOpts`, `AdminOpts`, `BENEFICIOS`, `SECURITY_HEADERS` (+81 more)
+- **110 isolated node(s):** `eslintConfig`, `UserOpts`, `AdminOpts`, `BENEFICIOS`, `SECURITY_HEADERS` (+105 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **12 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **13 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `ROADMAP — Evolución de Diamadmin` connect `Email Capsulas Content` to `Project Documentation`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
-- **Are the 12 inferred relationships involving `Cápsula Email Template Design Pattern (Diamadmin branding)` (e.g. with `Email Cápsula — Bienvenida (Welcome)` and `Email Cápsula — Caso de Uso (Ferretería Retail)`) actually correct?**
-  _`Cápsula Email Template Design Pattern (Diamadmin branding)` has 12 INFERRED edges - model-reasoned connections that need verification._
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `eslintConfig`, `UserOpts`, `AdminOpts` to the rest of the system?**
-  _86 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Cloudflare API Routes` be split into smaller, more focused modules?**
-  _Cohesion score 0.12488436632747456 - nodes in this community are weakly interconnected._
+  _110 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Email Capsulas Content` be split into smaller, more focused modules?**
   _Cohesion score 0.0873015873015873 - nodes in this community are weakly interconnected._
 - **Should `Landing Page Sections` be split into smaller, more focused modules?**
   _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
 - **Should `Frontend Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
+- **Should `TypeScript Config` be split into smaller, more focused modules?**
+  _Cohesion score 0.09523809523809523 - nodes in this community are weakly interconnected._
+- **Should `App Layout and Navigation` be split into smaller, more focused modules?**
+  _Cohesion score 0.14285714285714285 - nodes in this community are weakly interconnected._
