@@ -133,7 +133,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "lib_brevo_sendemail",
-      "community": 31,
+      "community": 0,
       "norm_label": "sendemail()"
     },
     {
@@ -483,7 +483,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "lib_urls_buildconfirmurl",
-      "community": 31,
+      "community": 0,
       "norm_label": "buildconfirmurl()"
     },
     {
@@ -793,7 +793,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "api_newsletter",
-      "community": 31,
+      "community": 0,
       "norm_label": "newsletter.ts"
     },
     {
@@ -813,7 +813,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "api_newsletter_onrequestpost",
-      "community": 31,
+      "community": 0,
       "norm_label": "onrequestpost()"
     },
     {
@@ -2337,14 +2337,14 @@
       "norm_label": "roadmap.md"
     },
     {
-      "label": "\ud83d\uddfa\ufe0f ROADMAP \u2014 EVOLUCI\u00d3N DE DIAMADMIN",
+      "label": "\ud83d\uddfa\ufe0f ROADMAP \u2014 EVOLUCI\u00d3N DE DIAMADMIN LANDING",
       "file_type": "document",
       "source_file": "ROADMAP.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
+      "id": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
       "community": 30,
-      "norm_label": "\ud83d\uddfa\ufe0f roadmap \u2014 evolucion de diamadmin"
+      "norm_label": "\ud83d\uddfa\ufe0f roadmap \u2014 evolucion de diamadmin landing"
     },
     {
       "label": "FASE 0 \u2014 Landing y validaci\u00f3n \u2705 COMPLETADA",
@@ -2410,7 +2410,7 @@
       "label": "Calidad",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L49",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "roadmap_calidad",
       "community": 30,
@@ -2420,7 +2420,7 @@
       "label": "FASE 1 \u2014 Landing: m\u00e9tricas, conversi\u00f3n y calidad \u2705 COMPLETADA",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L58",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "roadmap_fase_1_landing_m\u00e9tricas_conversi\u00f3n_y_calidad_completada",
       "community": 30,
@@ -2430,7 +2430,7 @@
       "label": "Analytics y m\u00e9tricas",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L62",
+      "source_location": "L67",
       "_origin": "ast",
       "id": "roadmap_analytics_y_m\u00e9tricas",
       "community": 30,
@@ -2440,7 +2440,7 @@
       "label": "P\u00e1ginas y flujos",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L68",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "roadmap_p\u00e1ginas_y_flujos",
       "community": 30,
@@ -2450,7 +2450,7 @@
       "label": "Captaci\u00f3n anticipada",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L74",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "roadmap_captaci\u00f3n_anticipada",
       "community": 30,
@@ -2460,7 +2460,7 @@
       "label": "Calidad y tests",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L78",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "roadmap_calidad_y_tests",
       "community": 30,
@@ -2470,111 +2470,21 @@
       "label": "FASE 2 \u2014 Landing: contenido SEO y autoridad \u23f3 PENDIENTE",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L84",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "roadmap_fase_2_landing_contenido_seo_y_autoridad_pendiente",
       "community": 30,
       "norm_label": "fase 2 \u2014 landing: contenido seo y autoridad \u23f3 pendiente"
     },
     {
-      "label": "FASE 3 \u2014 Landing \u2192 App: transici\u00f3n y conexi\u00f3n \u23f3 PENDIENTE",
+      "label": "FASE 3 \u2014 Landing: conversi\u00f3n hacia la app \u23f3 PENDIENTE",
       "file_type": "document",
       "source_file": "ROADMAP.md",
-      "source_location": "L97",
+      "source_location": "L102",
       "_origin": "ast",
-      "id": "roadmap_fase_3_landing_app_transici\u00f3n_y_conexi\u00f3n_pendiente",
+      "id": "roadmap_fase_3_landing_conversi\u00f3n_hacia_la_app_pendiente",
       "community": 30,
-      "norm_label": "fase 3 \u2014 landing \u2192 app: transicion y conexion \u23f3 pendiente"
-    },
-    {
-      "label": "FASE 4 \u2014 App: n\u00facleo t\u00e9cnico \ud83d\udd04 EN CURSO",
-      "file_type": "document",
-      "source_file": "ROADMAP.md",
-      "source_location": "L110",
-      "_origin": "ast",
-      "id": "roadmap_fase_4_app_n\u00facleo_t\u00e9cnico_en_curso",
-      "community": 30,
-      "norm_label": "fase 4 \u2014 app: nucleo tecnico \ud83d\udd04 en curso"
-    },
-    {
-      "label": "Backend (Spring Boot + PostgreSQL) \u2014 completado",
-      "file_type": "document",
-      "source_file": "ROADMAP.md",
-      "source_location": "L116",
-      "_origin": "ast",
-      "id": "roadmap_backend_spring_boot_postgresql_completado",
-      "community": 30,
-      "norm_label": "backend (spring boot + postgresql) \u2014 completado"
-    },
-    {
-      "label": "Frontend Angular \u2014 en progreso",
-      "file_type": "document",
-      "source_file": "ROADMAP.md",
-      "source_location": "L126",
-      "_origin": "ast",
-      "id": "roadmap_frontend_angular_en_progreso",
-      "community": 30,
-      "norm_label": "frontend angular \u2014 en progreso"
-    },
-    {
-      "label": "Autenticaci\u00f3n (bloquea la alpha)",
-      "file_type": "document",
-      "source_file": "ROADMAP.md",
-      "source_location": "L135",
-      "_origin": "ast",
-      "id": "roadmap_autenticaci\u00f3n_bloquea_la_alpha",
-      "community": 30,
-      "norm_label": "autenticacion (bloquea la alpha)"
-    },
-    {
-      "label": "Infraestructura",
-      "file_type": "document",
-      "source_file": "ROADMAP.md",
-      "source_location": "L141",
-      "_origin": "ast",
-      "id": "roadmap_infraestructura",
-      "community": 30,
-      "norm_label": "infraestructura"
-    },
-    {
-      "label": "FASE 5 \u2014 App: alpha privada \u23f3 PENDIENTE",
-      "file_type": "document",
-      "source_file": "ROADMAP.md",
-      "source_location": "L149",
-      "_origin": "ast",
-      "id": "roadmap_fase_5_app_alpha_privada_pendiente",
-      "community": 30,
-      "norm_label": "fase 5 \u2014 app: alpha privada \u23f3 pendiente"
-    },
-    {
-      "label": "FASE 6 \u2014 App: ventas, compras y facturaci\u00f3n \u23f3 PENDIENTE",
-      "file_type": "document",
-      "source_file": "ROADMAP.md",
-      "source_location": "L163",
-      "_origin": "ast",
-      "id": "roadmap_fase_6_app_ventas_compras_y_facturaci\u00f3n_pendiente",
-      "community": 30,
-      "norm_label": "fase 6 \u2014 app: ventas, compras y facturacion \u23f3 pendiente"
-    },
-    {
-      "label": "FASE 7 \u2014 App: estabilidad, calidad y seguridad \u23f3 PENDIENTE",
-      "file_type": "document",
-      "source_file": "ROADMAP.md",
-      "source_location": "L175",
-      "_origin": "ast",
-      "id": "roadmap_fase_7_app_estabilidad_calidad_y_seguridad_pendiente",
-      "community": 30,
-      "norm_label": "fase 7 \u2014 app: estabilidad, calidad y seguridad \u23f3 pendiente"
-    },
-    {
-      "label": "FASE 8 \u2014 App: m\u00f3dulos avanzados, multitenancy y monetizaci\u00f3n \u23f3 PENDIENTE",
-      "file_type": "document",
-      "source_file": "ROADMAP.md",
-      "source_location": "L190",
-      "_origin": "ast",
-      "id": "roadmap_fase_8_app_m\u00f3dulos_avanzados_multitenancy_y_monetizaci\u00f3n_pendiente",
-      "community": 30,
-      "norm_label": "fase 8 \u2014 app: modulos avanzados, multitenancy y monetizacion \u23f3 pendiente"
+      "norm_label": "fase 3 \u2014 landing: conversion hacia la app \u23f3 pendiente"
     },
     {
       "label": "CLAUDE.md \u2014 Graphify Instructions",
@@ -5486,9 +5396,9 @@
       "source_file": "frontend/functions/api/confirm.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_confirm",
-      "target": "lib_validate",
-      "confidence_score": 1.0
+      "target": "lib_validate"
     },
     {
       "relation": "imports_from",
@@ -5508,9 +5418,9 @@
       "source_file": "frontend/functions/api/delete-data.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_delete_data",
-      "target": "lib_validate",
-      "confidence_score": 1.0
+      "target": "lib_validate"
     },
     {
       "relation": "imports_from",
@@ -5519,9 +5429,9 @@
       "source_file": "frontend/functions/api/lista-espera.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_lista_espera",
-      "target": "lib_validate",
-      "confidence_score": 1.0
+      "target": "lib_validate"
     },
     {
       "relation": "imports_from",
@@ -5552,9 +5462,9 @@
       "source_file": "frontend/functions/api/unsubscribe.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_unsubscribe",
-      "target": "lib_validate",
-      "confidence_score": 1.0
+      "target": "lib_validate"
     },
     {
       "relation": "contains",
@@ -5593,9 +5503,9 @@
       "source_file": "frontend/functions/api/confirm.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_confirm",
-      "target": "lib_validate_isvalidemail",
-      "confidence_score": 1.0
+      "target": "lib_validate_isvalidemail"
     },
     {
       "relation": "calls",
@@ -5637,9 +5547,9 @@
       "source_file": "frontend/functions/api/delete-data.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_delete_data",
-      "target": "lib_validate_isvalidemail",
-      "confidence_score": 1.0
+      "target": "lib_validate_isvalidemail"
     },
     {
       "relation": "calls",
@@ -5659,9 +5569,9 @@
       "source_file": "frontend/functions/api/lista-espera.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_lista_espera",
-      "target": "lib_validate_isvalidemail",
-      "confidence_score": 1.0
+      "target": "lib_validate_isvalidemail"
     },
     {
       "relation": "calls",
@@ -5725,9 +5635,9 @@
       "source_file": "frontend/functions/api/unsubscribe.ts",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_unsubscribe",
-      "target": "lib_validate_isvalidemail",
-      "confidence_score": 1.0
+      "target": "lib_validate_isvalidemail"
     },
     {
       "relation": "calls",
@@ -5758,9 +5668,9 @@
       "source_file": "frontend/functions/api/lista-espera.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_lista_espera",
-      "target": "lib_validate_limits",
-      "confidence_score": 1.0
+      "target": "lib_validate_limits"
     },
     {
       "relation": "imports",
@@ -5813,9 +5723,9 @@
       "source_file": "frontend/functions/api/lista-espera.ts",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_lista_espera",
-      "target": "lib_validate_checklength",
-      "confidence_score": 1.0
+      "target": "lib_validate_checklength"
     },
     {
       "relation": "calls",
@@ -5879,9 +5789,9 @@
       "source_file": "frontend/functions/api/contacto.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_contacto",
-      "target": "shared_ratelimit",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit"
     },
     {
       "relation": "imports_from",
@@ -5890,9 +5800,9 @@
       "source_file": "frontend/functions/api/lista-espera.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_lista_espera",
-      "target": "shared_ratelimit",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit"
     },
     {
       "relation": "imports_from",
@@ -5901,9 +5811,9 @@
       "source_file": "frontend/functions/api/newsletter.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_newsletter",
-      "target": "shared_ratelimit",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit"
     },
     {
       "relation": "imports_from",
@@ -5912,9 +5822,9 @@
       "source_file": "frontend/functions/api/sugerencia.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_sugerencia",
-      "target": "shared_ratelimit",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit"
     },
     {
       "relation": "contains",
@@ -5922,9 +5832,9 @@
       "source_file": "frontend/functions/_shared/rateLimit.ts",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_ratelimit",
-      "target": "shared_ratelimit_getclientip",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_getclientip"
     },
     {
       "relation": "contains",
@@ -5932,9 +5842,9 @@
       "source_file": "frontend/functions/_shared/rateLimit.ts",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_ratelimit",
-      "target": "shared_ratelimit_kvbinding",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_kvbinding"
     },
     {
       "relation": "contains",
@@ -5942,9 +5852,9 @@
       "source_file": "frontend/functions/_shared/rateLimit.ts",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "shared_ratelimit",
-      "target": "shared_ratelimit_ratelimit",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_ratelimit"
     },
     {
       "relation": "imports",
@@ -5953,9 +5863,9 @@
       "source_file": "frontend/functions/api/contacto.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_contacto",
-      "target": "shared_ratelimit_kvbinding",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_kvbinding"
     },
     {
       "relation": "references",
@@ -5964,9 +5874,9 @@
       "source_file": "frontend/functions/api/contacto.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_contacto_env",
-      "target": "shared_ratelimit_kvbinding",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_kvbinding"
     },
     {
       "relation": "imports",
@@ -5975,9 +5885,9 @@
       "source_file": "frontend/functions/api/lista-espera.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_lista_espera",
-      "target": "shared_ratelimit_kvbinding",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_kvbinding"
     },
     {
       "relation": "references",
@@ -5986,9 +5896,9 @@
       "source_file": "frontend/functions/api/lista-espera.ts",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_lista_espera_env",
-      "target": "shared_ratelimit_kvbinding",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_kvbinding"
     },
     {
       "relation": "imports",
@@ -5997,9 +5907,9 @@
       "source_file": "frontend/functions/api/newsletter.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_newsletter",
-      "target": "shared_ratelimit_kvbinding",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_kvbinding"
     },
     {
       "relation": "references",
@@ -6008,9 +5918,9 @@
       "source_file": "frontend/functions/api/newsletter.ts",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_newsletter_env",
-      "target": "shared_ratelimit_kvbinding",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_kvbinding"
     },
     {
       "relation": "imports",
@@ -6019,9 +5929,9 @@
       "source_file": "frontend/functions/api/sugerencia.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_sugerencia",
-      "target": "shared_ratelimit_kvbinding",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_kvbinding"
     },
     {
       "relation": "references",
@@ -6030,9 +5940,9 @@
       "source_file": "frontend/functions/api/sugerencia.ts",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_sugerencia_env",
-      "target": "shared_ratelimit_kvbinding",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_kvbinding"
     },
     {
       "relation": "imports",
@@ -6041,9 +5951,9 @@
       "source_file": "frontend/functions/api/contacto.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_contacto",
-      "target": "shared_ratelimit_ratelimit",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_ratelimit"
     },
     {
       "relation": "calls",
@@ -6063,9 +5973,9 @@
       "source_file": "frontend/functions/api/lista-espera.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_lista_espera",
-      "target": "shared_ratelimit_ratelimit",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_ratelimit"
     },
     {
       "relation": "calls",
@@ -6085,9 +5995,9 @@
       "source_file": "frontend/functions/api/newsletter.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_newsletter",
-      "target": "shared_ratelimit_ratelimit",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_ratelimit"
     },
     {
       "relation": "calls",
@@ -6107,9 +6017,9 @@
       "source_file": "frontend/functions/api/sugerencia.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_sugerencia",
-      "target": "shared_ratelimit_ratelimit",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_ratelimit"
     },
     {
       "relation": "calls",
@@ -6129,9 +6039,9 @@
       "source_file": "frontend/functions/api/contacto.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_contacto",
-      "target": "shared_ratelimit_getclientip",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_getclientip"
     },
     {
       "relation": "calls",
@@ -6151,9 +6061,9 @@
       "source_file": "frontend/functions/api/lista-espera.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_lista_espera",
-      "target": "shared_ratelimit_getclientip",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_getclientip"
     },
     {
       "relation": "calls",
@@ -6173,9 +6083,9 @@
       "source_file": "frontend/functions/api/newsletter.ts",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_newsletter",
-      "target": "shared_ratelimit_getclientip",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_getclientip"
     },
     {
       "relation": "calls",
@@ -6195,9 +6105,9 @@
       "source_file": "frontend/functions/api/sugerencia.ts",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_sugerencia",
-      "target": "shared_ratelimit_getclientip",
-      "confidence_score": 1.0
+      "target": "shared_ratelimit_getclientip"
     },
     {
       "relation": "calls",
@@ -6256,9 +6166,9 @@
       "source_file": "frontend/functions/api/broadcast.ts",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_broadcast",
-      "target": "api_broadcast_timingsafecompare",
-      "confidence_score": 1.0
+      "target": "api_broadcast_timingsafecompare"
     },
     {
       "relation": "calls",
@@ -6267,9 +6177,9 @@
       "source_file": "frontend/functions/api/broadcast.ts",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "api_broadcast_onrequestpost",
-      "target": "api_broadcast_timingsafecompare",
-      "confidence_score": 1.0
+      "target": "api_broadcast_timingsafecompare"
     },
     {
       "relation": "contains",
@@ -7583,9 +7493,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude",
-      "target": "claude_graphify",
-      "confidence_score": 1.0
+      "target": "claude_graphify"
     },
     {
       "relation": "contains",
@@ -7593,9 +7503,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_diamadmin_landing_oficial",
-      "confidence_score": 1.0
+      "target": "readme_diamadmin_landing_oficial"
     },
     {
       "relation": "contains",
@@ -7603,9 +7513,9 @@
       "source_file": "README.md",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_diamadmin_landing_oficial",
-      "target": "readme_1_tecnolog\u00edas_utilizadas",
-      "confidence_score": 1.0
+      "target": "readme_1_tecnolog\u00edas_utilizadas"
     },
     {
       "relation": "contains",
@@ -7613,9 +7523,9 @@
       "source_file": "README.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_diamadmin_landing_oficial",
-      "target": "readme_2_arquitectura_actual",
-      "confidence_score": 1.0
+      "target": "readme_2_arquitectura_actual"
     },
     {
       "relation": "contains",
@@ -7623,9 +7533,9 @@
       "source_file": "README.md",
       "source_location": "L52",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_diamadmin_landing_oficial",
-      "target": "readme_3_relaci\u00f3n_con_la_aplicaci\u00f3n_real",
-      "confidence_score": 1.0
+      "target": "readme_3_relaci\u00f3n_con_la_aplicaci\u00f3n_real"
     },
     {
       "relation": "contains",
@@ -7633,9 +7543,9 @@
       "source_file": "README.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_diamadmin_landing_oficial",
-      "target": "readme_4_estructura_del_proyecto",
-      "confidence_score": 1.0
+      "target": "readme_4_estructura_del_proyecto"
     },
     {
       "relation": "contains",
@@ -7643,9 +7553,9 @@
       "source_file": "README.md",
       "source_location": "L106",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_diamadmin_landing_oficial",
-      "target": "readme_5_estado_actual_del_proyecto",
-      "confidence_score": 1.0
+      "target": "readme_5_estado_actual_del_proyecto"
     },
     {
       "relation": "contains",
@@ -7653,9 +7563,9 @@
       "source_file": "README.md",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_diamadmin_landing_oficial",
-      "target": "readme_6_instalaci\u00f3n_y_desarrollo_local",
-      "confidence_score": 1.0
+      "target": "readme_6_instalaci\u00f3n_y_desarrollo_local"
     },
     {
       "relation": "contains",
@@ -7663,9 +7573,9 @@
       "source_file": "README.md",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_1_tecnolog\u00edas_utilizadas",
-      "target": "readme_frontend",
-      "confidence_score": 1.0
+      "target": "readme_frontend"
     },
     {
       "relation": "contains",
@@ -7673,9 +7583,9 @@
       "source_file": "README.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_3_relaci\u00f3n_con_la_aplicaci\u00f3n_real",
-      "target": "readme_aplicaci\u00f3n_real_otro_repo",
-      "confidence_score": 1.0
+      "target": "readme_aplicaci\u00f3n_real_otro_repo"
     },
     {
       "relation": "contains",
@@ -7683,9 +7593,9 @@
       "source_file": "README.md",
       "source_location": "L56",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_3_relaci\u00f3n_con_la_aplicaci\u00f3n_real",
-      "target": "readme_landing_este_repo",
-      "confidence_score": 1.0
+      "target": "readme_landing_este_repo"
     },
     {
       "relation": "contains",
@@ -7694,7 +7604,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "source": "roadmap",
-      "target": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
+      "target": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
       "confidence_score": 1.0
     },
     {
@@ -7703,7 +7613,7 @@
       "source_file": "ROADMAP.md",
       "source_location": "L8",
       "weight": 1.0,
-      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
+      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
       "target": "roadmap_fase_0_landing_y_validaci\u00f3n_completada",
       "confidence_score": 1.0
     },
@@ -7711,9 +7621,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "ROADMAP.md",
-      "source_location": "L58",
+      "source_location": "L63",
       "weight": 1.0,
-      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
+      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
       "target": "roadmap_fase_1_landing_m\u00e9tricas_conversi\u00f3n_y_calidad_completada",
       "confidence_score": 1.0
     },
@@ -7721,9 +7631,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "ROADMAP.md",
-      "source_location": "L84",
+      "source_location": "L89",
       "weight": 1.0,
-      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
+      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
       "target": "roadmap_fase_2_landing_contenido_seo_y_autoridad_pendiente",
       "confidence_score": 1.0
     },
@@ -7731,60 +7641,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "ROADMAP.md",
-      "source_location": "L97",
+      "source_location": "L102",
       "weight": 1.0,
-      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
-      "target": "roadmap_fase_3_landing_app_transici\u00f3n_y_conexi\u00f3n_pendiente",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "ROADMAP.md",
-      "source_location": "L110",
-      "weight": 1.0,
-      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
-      "target": "roadmap_fase_4_app_n\u00facleo_t\u00e9cnico_en_curso",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "ROADMAP.md",
-      "source_location": "L149",
-      "weight": 1.0,
-      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
-      "target": "roadmap_fase_5_app_alpha_privada_pendiente",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "ROADMAP.md",
-      "source_location": "L163",
-      "weight": 1.0,
-      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
-      "target": "roadmap_fase_6_app_ventas_compras_y_facturaci\u00f3n_pendiente",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "ROADMAP.md",
-      "source_location": "L175",
-      "weight": 1.0,
-      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
-      "target": "roadmap_fase_7_app_estabilidad_calidad_y_seguridad_pendiente",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "ROADMAP.md",
-      "source_location": "L190",
-      "weight": 1.0,
-      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin",
-      "target": "roadmap_fase_8_app_m\u00f3dulos_avanzados_multitenancy_y_monetizaci\u00f3n_pendiente",
+      "source": "roadmap_roadmap_evoluci\u00f3n_de_diamadmin_landing",
+      "target": "roadmap_fase_3_landing_conversi\u00f3n_hacia_la_app_pendiente",
       "confidence_score": 1.0
     },
     {
@@ -7793,9 +7653,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_fase_0_landing_y_validaci\u00f3n_completada",
-      "target": "roadmap_calidad",
-      "confidence_score": 1.0
+      "target": "roadmap_calidad"
     },
     {
       "relation": "contains",
@@ -7803,9 +7663,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_fase_0_landing_y_validaci\u00f3n_completada",
-      "target": "roadmap_email_y_captaci\u00f3n",
-      "confidence_score": 1.0
+      "target": "roadmap_email_y_captaci\u00f3n"
     },
     {
       "relation": "contains",
@@ -7813,9 +7673,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_fase_0_landing_y_validaci\u00f3n_completada",
-      "target": "roadmap_legal_y_cumplimiento",
-      "confidence_score": 1.0
+      "target": "roadmap_legal_y_cumplimiento"
     },
     {
       "relation": "contains",
@@ -7823,9 +7683,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_fase_0_landing_y_validaci\u00f3n_completada",
-      "target": "roadmap_producto_y_dise\u00f1o",
-      "confidence_score": 1.0
+      "target": "roadmap_producto_y_dise\u00f1o"
     },
     {
       "relation": "contains",
@@ -7833,9 +7693,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L45",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_fase_0_landing_y_validaci\u00f3n_completada",
-      "target": "roadmap_seguridad",
-      "confidence_score": 1.0
+      "target": "roadmap_seguridad"
     },
     {
       "relation": "contains",
@@ -7843,9 +7703,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_fase_0_landing_y_validaci\u00f3n_completada",
-      "target": "roadmap_seo",
-      "confidence_score": 1.0
+      "target": "roadmap_seo"
     },
     {
       "relation": "contains",
@@ -7853,9 +7713,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L62",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_fase_1_landing_m\u00e9tricas_conversi\u00f3n_y_calidad_completada",
-      "target": "roadmap_analytics_y_m\u00e9tricas",
-      "confidence_score": 1.0
+      "target": "roadmap_analytics_y_m\u00e9tricas"
     },
     {
       "relation": "contains",
@@ -7863,9 +7723,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_fase_1_landing_m\u00e9tricas_conversi\u00f3n_y_calidad_completada",
-      "target": "roadmap_calidad_y_tests",
-      "confidence_score": 1.0
+      "target": "roadmap_calidad_y_tests"
     },
     {
       "relation": "contains",
@@ -7873,9 +7733,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L74",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_fase_1_landing_m\u00e9tricas_conversi\u00f3n_y_calidad_completada",
-      "target": "roadmap_captaci\u00f3n_anticipada",
-      "confidence_score": 1.0
+      "target": "roadmap_captaci\u00f3n_anticipada"
     },
     {
       "relation": "contains",
@@ -7883,49 +7743,9 @@
       "source_file": "ROADMAP.md",
       "source_location": "L68",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "roadmap_fase_1_landing_m\u00e9tricas_conversi\u00f3n_y_calidad_completada",
-      "target": "roadmap_p\u00e1ginas_y_flujos",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "ROADMAP.md",
-      "source_location": "L135",
-      "weight": 1.0,
-      "source": "roadmap_fase_4_app_n\u00facleo_t\u00e9cnico_en_curso",
-      "target": "roadmap_autenticaci\u00f3n_bloquea_la_alpha",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "ROADMAP.md",
-      "source_location": "L116",
-      "weight": 1.0,
-      "source": "roadmap_fase_4_app_n\u00facleo_t\u00e9cnico_en_curso",
-      "target": "roadmap_backend_spring_boot_postgresql_completado",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "ROADMAP.md",
-      "source_location": "L126",
-      "weight": 1.0,
-      "source": "roadmap_fase_4_app_n\u00facleo_t\u00e9cnico_en_curso",
-      "target": "roadmap_frontend_angular_en_progreso",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "ROADMAP.md",
-      "source_location": "L141",
-      "weight": 1.0,
-      "source": "roadmap_fase_4_app_n\u00facleo_t\u00e9cnico_en_curso",
-      "target": "roadmap_infraestructura",
-      "confidence_score": 1.0
+      "target": "roadmap_p\u00e1ginas_y_flujos"
     },
     {
       "relation": "references",
@@ -8808,5 +8628,5 @@
       "source_file": "capsulas/capsula-hosteleria.html"
     }
   ],
-  "built_at_commit": "50a4d4ca32b409ed07c471de3721014070423cbe"
+  "built_at_commit": "808f67d67ef051aa30feb718bf114621d93809e7"
 }

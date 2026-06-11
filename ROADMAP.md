@@ -1,7 +1,7 @@
-# 🗺️ ROADMAP — EVOLUCIÓN DE DIAMADMIN
+# 🗺️ ROADMAP — EVOLUCIÓN DE DIAMADMIN LANDING
 
 > Diamadmin es un sistema de gestión empresarial (ERP) modular para pymes que centraliza stock, ventas, compras, facturación y RRHH en una sola plataforma.
-> Este roadmap refleja la evolución del producto desde la landing de validación hasta una aplicación ERP madura.
+> Este roadmap refleja la evolución de la landing de validación: captación, SEO, contenido y conversión.
 
 ---
 
@@ -45,6 +45,11 @@
 ### Seguridad
 - [x] Middleware de seguridad API: CORS, límite de tamaño, security headers
 - [x] Headers HTTP de seguridad en todas las rutas (`_headers`)
+- [x] Rate limiting por IP en todos los endpoints públicos (Cloudflare KV)
+- [x] BROADCAST_SECRET obligatorio en confirm, unsubscribe y delete-data
+- [x] Comparación timing-safe en broadcast
+- [x] Content-Security-Policy en `_headers`
+- [x] maxLength en todos los inputs del frontend
 
 ### Calidad
 - [x] Tests automatizados (Vitest): validación, HMAC, generación de emails (29 tests)
@@ -61,9 +66,9 @@
 
 ### Analytics y métricas
 - [x] Analytics de privacidad sin cookies (Umami — `ef92d61a-ea38-4566-862c-14d2d516774b`)
-- [ ] Tracking de eventos clave: clic en CTA, envíos de formulario, scroll depth *(pospuesto a alpha)*
-- [ ] Estrategia de precios revisada → sección de pricing definitiva y activa *(pospuesto a alpha)*
-- [ ] A/B testing básico en el headline principal *(pospuesto a alpha)*
+- [ ] Tracking de eventos clave: clic en CTA, envíos de formulario, scroll depth *(pospuesto)*
+- [ ] Estrategia de precios revisada → sección de pricing definitiva y activa *(pospuesto)*
+- [ ] A/B testing básico en el headline principal *(pospuesto)*
 
 ### Páginas y flujos
 - [x] Página de confirmación de suscripción con CTA claro (`/confirmar`)
@@ -76,8 +81,8 @@
 - [x] Endpoint `/api/lista-espera` con email de confirmación (Brevo) y alta en lista de contactos
 
 ### Calidad y tests
-- [ ] Ampliar cobertura de tests: handlers de contacto, sugerencias, newsletter y lista de espera *(pospuesto a alpha)*
-- [ ] Revisión de accesibilidad *(pospuesto a alpha)*
+- [ ] Ampliar cobertura de tests: handlers de contacto, sugerencias, newsletter y lista de espera *(pospuesto)*
+- [ ] Revisión de accesibilidad *(pospuesto)*
 
 ---
 
@@ -94,112 +99,16 @@
 
 ---
 
-## FASE 3 — Landing → App: transición y conexión ⏳ PENDIENTE
+## FASE 3 — Landing: conversión hacia la app ⏳ PENDIENTE
 
-**Objetivo:** enlazar la landing con `app.diamadmin.com` y gestionar el acceso a la alpha.
+**Objetivo:** preparar la landing para cuando la app esté disponible.
 
-- [x] Sistema de lista de espera con formulario y email de confirmación (`#lista-espera`)
-- [ ] CTA principal apunta a `app.diamadmin.com` (registro / lista de espera) *(cuando haya alpha)*
-- [ ] Login / registro desde la landing redirige a la app *(cuando haya alpha)*
-- [ ] Estado del sistema visible (uptime, versión actual) *(cuando haya alpha)*
-- [ ] Notas de versión / changelog público *(cuando haya alpha)*
-- [ ] Documentación básica de usuario (`/docs`) *(cuando haya alpha)*
+- [ ] CTA principal apunta a registro / lista de espera cuando haya alpha
+- [ ] Notas de versión / changelog público (`/changelog`)
+- [ ] Documentación básica de usuario (`/docs`)
+- [ ] Estado del sistema visible (uptime, versión actual)
 
 ---
 
-## FASE 4 — App: núcleo técnico 🔄 EN CURSO
-
-**Objetivo:** arquitectura sólida, CRUD funcional desde el navegador y autenticación real antes de abrir a usuarios.
-
-**Stack:** Angular 21 · Spring Boot 4 · Java 21 · PostgreSQL · JWT
-
-### Backend (Spring Boot + PostgreSQL) — completado
-- [x] Proyecto Spring Boot 4 + Java 21 + JPA/Hibernate configurado
-- [x] Arquitectura modular por dominios: `core` · `catalog` · `common`
-- [x] Entidades JPA: `User`, `Role`, `Product`, `Brand`, `Category`, `Model`
-- [x] CRUD completo de `Product` en backend (GET all, GET id, POST, PUT, DELETE)
-- [x] DTOs desacoplados con validación Bean Validation
-- [x] `GlobalExceptionHandler` centralizado (404, 400)
-- [x] CORS configurado para `localhost:4200`
-- [x] `init.sql` con datos seed + `DatabaseBootstrap`
-
-### Frontend Angular — en progreso
-- [x] Proyecto Angular 21 configurado (standalone components, lazy loading)
-- [x] `ProductService` consumiendo `/api/products`
-- [x] `ProductListComponent` mostrando listado real desde backend
-- [ ] `ProductFormComponent`: alta y edición con validación reactiva
-- [ ] Layout base: sidebar, topbar, área de contenido
-- [ ] `DashboardComponent` con métricas clave
-- [ ] Tema visual consistente con la landing (paleta azul/diamante)
-
-### Autenticación (bloquea la alpha)
-- [ ] Spring Security + JWT (sin sesiones de servidor)
-- [ ] Endpoints `/auth/login` y `/auth/refresh`
-- [ ] Protección de endpoints por rol (`ADMIN`, `MANAGER`, `VIEWER`)
-- [ ] Guards de rutas y `HttpInterceptor` en Angular
-
-### Infraestructura
-- [ ] Variables de entorno separadas: dev / prod
-- [ ] CI básico con GitHub Actions (build + test en cada PR)
-
-**Dominio:** `app.diamadmin.com`
-
----
-
-## FASE 5 — App: alpha privada ⏳ PENDIENTE
-
-**Objetivo:** primeras empresas reales usando los módulos básicos con sus datos.
-
-- Registro de empresas por invitación (integración con lista de espera de la landing)
-- Onboarding guiado: selección de sector y módulos activos
-- CRUD completo de catálogo (Brand, Category, Model) desde el frontend
-- Módulo de Inventario / Stock: movimientos, alertas de stock mínimo, historial
-- Módulo de Contactos: clientes y proveedores con historial de actividad
-- Panel de superadmin: gestión de tenants y licencias
-- Auditoría básica: `createdAt`, `updatedAt`, `createdBy` en todas las entidades
-
----
-
-## FASE 6 — App: ventas, compras y facturación ⏳ PENDIENTE
-
-**Objetivo:** ciclo completo de compra-venta con facturación integrada.
-
-- Módulo de Ventas: presupuestos, pedidos de venta, albaranes, devoluciones
-- Módulo de Compras: pedidos a proveedores, recepción de mercancía, facturas de proveedor
-- Módulo de Facturación: facturas con numeración legal, PDF, envío por email, estado de cobro
-- Módulo de Caja / TPV básico
-- Historial de auditoría por entidad (tabla `audit_log`)
-
----
-
-## FASE 7 — App: estabilidad, calidad y seguridad ⏳ PENDIENTE
-
-**Objetivo:** base sólida para producción real que las empresas puedan usar sin fricciones.
-
-- Hardening OWASP: rate limiting, CORS estricto, HTTPS, validación estricta
-- 2FA opcional (TOTP)
-- Tests unitarios backend (JUnit 5 + Mockito), tests de integración (Testcontainers)
-- Tests de componente Angular + tests E2E (Playwright)
-- Logs estructurados (SLF4J + Logback) + health checks (`/actuator`)
-- Documentación API con Swagger / OpenAPI
-- Pipeline CI/CD completo: lint → test → build → deploy
-- Migraciones de BD controladas con Flyway o Liquibase
-
----
-
-## FASE 8 — App: módulos avanzados, multitenancy y monetización ⏳ PENDIENTE
-
-**Objetivo:** ampliar a sectores especializados y convertir la tracción en un modelo sostenible.
-
-- Parametrización por tenant: módulos activables/desactivables, configuración por empresa
-- Módulos sectoriales: RRHH, Hostelería, Clínica, Real Estate, Logística, Producción
-- Planes de pago (Stripe): Basic · Pro · Enterprise con feature flags por plan
-- API pública (OpenAPI/Swagger) para integraciones de terceros
-- Internacionalización (ES, EN, PT)
-- Documentación pública de usuario en `diamadmin.com/docs`
-
----
-
-> **Tecnología landing:** Next.js 15 · Tailwind CSS · Cloudflare Pages · Cloudflare Pages Functions · Brevo API
-> **Tecnología app:** Angular 21 · Spring Boot 4 · Java 21 · PostgreSQL · JWT
-> **Dominios:** `www.diamadmin.com` · `app.diamadmin.com`
+> **Tecnología:** Next.js 15 · Tailwind CSS · Cloudflare Pages · Cloudflare Pages Functions · Brevo API
+> **Dominio:** `www.diamadmin.com`
