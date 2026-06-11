@@ -1,0 +1,377 @@
+{
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\__tests__\\emails.test.ts": {
+    "mtime": 1779296279.8181212,
+    "ast_hash": "ee35852a682a6a5390764cbff0b144ff",
+    "semantic_hash": "ee35852a682a6a5390764cbff0b144ff"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\__tests__\\security.test.ts": {
+    "mtime": 1779296255.3065457,
+    "ast_hash": "9788669aabb2a8e868ea0b455eea3bee",
+    "semantic_hash": "9788669aabb2a8e868ea0b455eea3bee"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\__tests__\\validate.test.ts": {
+    "mtime": 1779296244.3123896,
+    "ast_hash": "7795bc066c5537cefcd88a0e864afcfc",
+    "semantic_hash": "7795bc066c5537cefcd88a0e864afcfc"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\eslint.config.mjs": {
+    "mtime": 1778077487.1090696,
+    "ast_hash": "6c4307ffa009658f5c97f5629094c0c2",
+    "semantic_hash": "6c4307ffa009658f5c97f5629094c0c2"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\_lib\\brevo.ts": {
+    "mtime": 1779366717.620364,
+    "ast_hash": "0ccc59236e8cff5a6182324683a60983",
+    "semantic_hash": "0ccc59236e8cff5a6182324683a60983"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\_lib\\emails.ts": {
+    "mtime": 1779363094.6397927,
+    "ast_hash": "5c1677fa8ea878a9fe45414a5e31f03c",
+    "semantic_hash": "5c1677fa8ea878a9fe45414a5e31f03c"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\_lib\\security.ts": {
+    "mtime": 1779286833.0661848,
+    "ast_hash": "572f0e15691476bb24d89e1da653f9ad",
+    "semantic_hash": "572f0e15691476bb24d89e1da653f9ad"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\_lib\\urls.ts": {
+    "mtime": 1779286835.1638927,
+    "ast_hash": "9428d9dd326ee89139611e3cfb1dc7c3",
+    "semantic_hash": "9428d9dd326ee89139611e3cfb1dc7c3"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\_lib\\validate.ts": {
+    "mtime": 1779296171.0375938,
+    "ast_hash": "495860703c4e35dd4a6acaa0401e668e",
+    "semantic_hash": "495860703c4e35dd4a6acaa0401e668e"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\api\\_middleware.ts": {
+    "mtime": 1779296216.099215,
+    "ast_hash": "23d2277a432f2b78fabb7169108c40c1",
+    "semantic_hash": "23d2277a432f2b78fabb7169108c40c1"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\api\\broadcast.ts": {
+    "mtime": 1779287952.224811,
+    "ast_hash": "11a619f9eedbbef9d20718bdd3feafae",
+    "semantic_hash": "11a619f9eedbbef9d20718bdd3feafae"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\api\\confirm.ts": {
+    "mtime": 1779361089.898782,
+    "ast_hash": "6c92d0c9245e528663ce47032c0812e1",
+    "semantic_hash": "6c92d0c9245e528663ce47032c0812e1"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\api\\contacto.ts": {
+    "mtime": 1779296183.620125,
+    "ast_hash": "8fca8dd500c0678705c14ba3ff0c7f04",
+    "semantic_hash": "8fca8dd500c0678705c14ba3ff0c7f04"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\api\\delete-data.ts": {
+    "mtime": 1779287944.2368317,
+    "ast_hash": "2c9342f7df4eda114d27c6f1d3c5afbe",
+    "semantic_hash": "2c9342f7df4eda114d27c6f1d3c5afbe"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\api\\lista-espera.ts": {
+    "mtime": 1779366728.3537264,
+    "ast_hash": "5d685847c68515933283b86aec65f64b",
+    "semantic_hash": "5d685847c68515933283b86aec65f64b"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\api\\newsletter.ts": {
+    "mtime": 1779296194.5484807,
+    "ast_hash": "e64e58b5e9bfeb49d137a67281278474",
+    "semantic_hash": "e64e58b5e9bfeb49d137a67281278474"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\api\\sugerencia.ts": {
+    "mtime": 1779296207.3772178,
+    "ast_hash": "a3f01da22c73eb1543ddb25842efd5f8",
+    "semantic_hash": "a3f01da22c73eb1543ddb25842efd5f8"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\functions\\api\\unsubscribe.ts": {
+    "mtime": 1779361117.262184,
+    "ast_hash": "34a9ffba9608cf22dd6806901e0e4b25",
+    "semantic_hash": "34a9ffba9608cf22dd6806901e0e4b25"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\next.config.js": {
+    "mtime": 1778500739.226905,
+    "ast_hash": "24a1d3fcb683217d5b1e8ddb0f8f309e",
+    "semantic_hash": "24a1d3fcb683217d5b1e8ddb0f8f309e"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\package.json": {
+    "mtime": 1779296787.85214,
+    "ast_hash": "70e4f29b65c05b0e63c9c49d023f8db4",
+    "semantic_hash": "70e4f29b65c05b0e63c9c49d023f8db4"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\postcss.config.js": {
+    "mtime": 1778077487.163393,
+    "ast_hash": "9a248c780e4c76f85b0f492f63a3d417",
+    "semantic_hash": "9a248c780e4c76f85b0f492f63a3d417"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\aviso-legal\\page.tsx": {
+    "mtime": 1779301859.4522595,
+    "ast_hash": "80f75edfebcd3a03a7e15ad12bbea426",
+    "semantic_hash": "80f75edfebcd3a03a7e15ad12bbea426"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\baja\\BajaContent.tsx": {
+    "mtime": 1779364982.3755403,
+    "ast_hash": "c6b5a2c2135e9cca5340ac14d0e7361f",
+    "semantic_hash": "c6b5a2c2135e9cca5340ac14d0e7361f"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\baja\\page.tsx": {
+    "mtime": 1779364988.9578807,
+    "ast_hash": "fef03df86211ae01821a00dcd23fe703",
+    "semantic_hash": "fef03df86211ae01821a00dcd23fe703"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\confirmar\\ConfirmarContent.tsx": {
+    "mtime": 1779364953.2023158,
+    "ast_hash": "8b6a86adcc5d39b40a7caa040263c209",
+    "semantic_hash": "8b6a86adcc5d39b40a7caa040263c209"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\confirmar\\page.tsx": {
+    "mtime": 1779364958.3206556,
+    "ast_hash": "595cdcae1666b8130edd268646910acf",
+    "semantic_hash": "595cdcae1666b8130edd268646910acf"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\cookies\\page.tsx": {
+    "mtime": 1779301809.7788227,
+    "ast_hash": "eaebc8672a6cf30e76b9596c70318821",
+    "semantic_hash": "eaebc8672a6cf30e76b9596c70318821"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\error.tsx": {
+    "mtime": 1779363277.2393708,
+    "ast_hash": "565e32b954621af27bd9f292556f2fb0",
+    "semantic_hash": "565e32b954621af27bd9f292556f2fb0"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\layout.tsx": {
+    "mtime": 1779363789.7557664,
+    "ast_hash": "d5d0da6894c3d3d1cc3e44f44b180b4f",
+    "semantic_hash": "d5d0da6894c3d3d1cc3e44f44b180b4f"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\not-found.tsx": {
+    "mtime": 1779363261.8653917,
+    "ast_hash": "37bbca600c61681452a5430e0947f38f",
+    "semantic_hash": "37bbca600c61681452a5430e0947f38f"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\page.tsx": {
+    "mtime": 1779363374.980864,
+    "ast_hash": "c70bdc1c87f840cbc65d1842be6aecd4",
+    "semantic_hash": "c70bdc1c87f840cbc65d1842be6aecd4"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\privacidad\\page.tsx": {
+    "mtime": 1779301757.0138476,
+    "ast_hash": "0133e40964590d75b0d95e6d98c7e54e",
+    "semantic_hash": "0133e40964590d75b0d95e6d98c7e54e"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\robots.ts": {
+    "mtime": 1779288568.139499,
+    "ast_hash": "0a6bc18803e21b88ed259c454a9cda2d",
+    "semantic_hash": "0a6bc18803e21b88ed259c454a9cda2d"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\app\\sitemap.ts": {
+    "mtime": 1779302031.0110135,
+    "ast_hash": "1dd4931dccf4c9bd26e2ea8cfa8f4a2a",
+    "semantic_hash": "1dd4931dccf4c9bd26e2ea8cfa8f4a2a"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\layout\\CookieBanner.tsx": {
+    "mtime": 1779301873.472082,
+    "ast_hash": "3b2c710b68dc4c7254d84eb5904359e3",
+    "semantic_hash": "3b2c710b68dc4c7254d84eb5904359e3"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\layout\\Footer.tsx": {
+    "mtime": 1779349391.7378862,
+    "ast_hash": "6827e3f9bb597027e743d1c62d04cee0",
+    "semantic_hash": "6827e3f9bb597027e743d1c62d04cee0"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\layout\\Navbar.tsx": {
+    "mtime": 1779365785.2659926,
+    "ast_hash": "711707b4d0fd99d6e70325f86e1c27aa",
+    "semantic_hash": "711707b4d0fd99d6e70325f86e1c27aa"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\layout\\ThemeToggle.tsx": {
+    "mtime": 1778077487.3635273,
+    "ast_hash": "f81c895726775bd9d9947d6cf0118508",
+    "semantic_hash": "f81c895726775bd9d9947d6cf0118508"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\sections\\ComoFunciona.tsx": {
+    "mtime": 1779113979.5084722,
+    "ast_hash": "1c3a4edb4ac7cbff2af845dbe135ef1e",
+    "semantic_hash": "1c3a4edb4ac7cbff2af845dbe135ef1e"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\sections\\Contacto.tsx": {
+    "mtime": 1779291829.9970267,
+    "ast_hash": "8eb74353b3cc5aff15a6ab7ca5b1bfb5",
+    "semantic_hash": "8eb74353b3cc5aff15a6ab7ca5b1bfb5"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\sections\\Hero.tsx": {
+    "mtime": 1779114333.4131634,
+    "ast_hash": "7dcc2b207961c3806e254c7c2893f877",
+    "semantic_hash": "7dcc2b207961c3806e254c7c2893f877"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\sections\\ListaEspera.tsx": {
+    "mtime": 1779364722.6990697,
+    "ast_hash": "0ae65d4639b9919359607f17955fc225",
+    "semantic_hash": "0ae65d4639b9919359607f17955fc225"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\sections\\Modulos.tsx": {
+    "mtime": 1779113664.324721,
+    "ast_hash": "8c8a851ba8213d7c682eaea0a4f5b699",
+    "semantic_hash": "8c8a851ba8213d7c682eaea0a4f5b699"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\sections\\Producto.tsx": {
+    "mtime": 1778235728.1669657,
+    "ast_hash": "97f1db392a876737646a790a7dc45539",
+    "semantic_hash": "97f1db392a876737646a790a7dc45539"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\sections\\QuienesSomos.tsx": {
+    "mtime": 1778232114.9879363,
+    "ast_hash": "21022974a2d512fc5059517a7853320c",
+    "semantic_hash": "21022974a2d512fc5059517a7853320c"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\components\\sections\\Suscripcion.tsx": {
+    "mtime": 1778232098.7387812,
+    "ast_hash": "17eb00e2acfb283a87ba5eae9c1d7a35",
+    "semantic_hash": "17eb00e2acfb283a87ba5eae9c1d7a35"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\config\\stats.ts": {
+    "mtime": 1779113010.9861295,
+    "ast_hash": "29aa5c6370155e920d6889fbfc974c56",
+    "semantic_hash": "29aa5c6370155e920d6889fbfc974c56"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\hooks\\useFadeInOnScroll.ts": {
+    "mtime": 1778077487.5318444,
+    "ast_hash": "71020c5e0853e5f3eee80618b80c1b9b",
+    "semantic_hash": "71020c5e0853e5f3eee80618b80c1b9b"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\src\\types\\css.d.ts": {
+    "mtime": 1778077487.5519562,
+    "ast_hash": "cc7616a05cbdb8080ecb173348d436cb",
+    "semantic_hash": "cc7616a05cbdb8080ecb173348d436cb"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\tailwind.config.js": {
+    "mtime": 1778077487.559522,
+    "ast_hash": "f22d992a4ba9dcb98e7b1c72e025acdc",
+    "semantic_hash": "f22d992a4ba9dcb98e7b1c72e025acdc"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\tsconfig.json": {
+    "mtime": 1778077487.5650556,
+    "ast_hash": "5ab506868fd96f76081ccc59f61e1368",
+    "semantic_hash": "5ab506868fd96f76081ccc59f61e1368"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\vitest.config.ts": {
+    "mtime": 1779296234.9147625,
+    "ast_hash": "3566472e3f0c43cf7743ba410102288f",
+    "semantic_hash": "3566472e3f0c43cf7743ba410102288f"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\CLAUDE.md": {
+    "mtime": 1781168706.0640182,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": "8a6643a420fdad6bfb583523bc6cef16"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\README.md": {
+    "mtime": 1778513979.7220285,
+    "ast_hash": "408d53bfc77c961d467e7bb97dc54134",
+    "semantic_hash": "408d53bfc77c961d467e7bb97dc54134"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\ROADMAP.md": {
+    "mtime": 1779363795.401759,
+    "ast_hash": "fec9600f38b233442824c1612ea58f59",
+    "semantic_hash": "fec9600f38b233442824c1612ea58f59"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\_bienvenida.html": {
+    "mtime": 1779200249.4087665,
+    "ast_hash": "ee046cccab0cd1473fc41702d74f6c8d",
+    "semantic_hash": "ee046cccab0cd1473fc41702d74f6c8d"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-casos-uso.html": {
+    "mtime": 1779200420.076373,
+    "ast_hash": "a48eb3572ed8878a461f858076bf1c39",
+    "semantic_hash": "a48eb3572ed8878a461f858076bf1c39"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-digitalizacion.html": {
+    "mtime": 1779200387.6278932,
+    "ast_hash": "690143c027047e3d66a89f1291987ad9",
+    "semantic_hash": "690143c027047e3d66a89f1291987ad9"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-eficiencia.html": {
+    "mtime": 1779200453.230787,
+    "ast_hash": "af5c92e6e05046ac933f27fb14ca33bb",
+    "semantic_hash": "af5c92e6e05046ac933f27fb14ca33bb"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-equipo.html": {
+    "mtime": 1779200357.1701052,
+    "ast_hash": "3c4fc8da809896d6abbca0a7978eb1f8",
+    "semantic_hash": "3c4fc8da809896d6abbca0a7978eb1f8"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-finanzas.html": {
+    "mtime": 1779200585.3627162,
+    "ast_hash": "750c7123892431d2064bc56742a4f33b",
+    "semantic_hash": "750c7123892431d2064bc56742a4f33b"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-hosteleria.html": {
+    "mtime": 1779200515.591273,
+    "ast_hash": "2d583fcd7f6b048893911e145c1c4522",
+    "semantic_hash": "2d583fcd7f6b048893911e145c1c4522"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-integraciones.html": {
+    "mtime": 1779200483.4473293,
+    "ast_hash": "6abd1db0fdd49a6cec6470e4c606b3b6",
+    "semantic_hash": "6abd1db0fdd49a6cec6470e4c606b3b6"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-modulos.html": {
+    "mtime": 1779200295.447363,
+    "ast_hash": "f82d0cc3295e7c124f4e01aa113b08f3",
+    "semantic_hash": "f82d0cc3295e7c124f4e01aa113b08f3"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-pymes.html": {
+    "mtime": 1779200616.0016224,
+    "ast_hash": "ea17b7ef822a5aea0a960026b2a1c77e",
+    "semantic_hash": "ea17b7ef822a5aea0a960026b2a1c77e"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-retail.html": {
+    "mtime": 1779200554.3809066,
+    "ast_hash": "de49877267845057775cc88e0b876597",
+    "semantic_hash": "de49877267845057775cc88e0b876597"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\capsulas\\capsula-stock.html": {
+    "mtime": 1779200326.0308063,
+    "ast_hash": "ddd4633945e586fc725d4768834cdac3",
+    "semantic_hash": "ddd4633945e586fc725d4768834cdac3"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\public\\favicon\\android-chrome-192x192.png": {
+    "mtime": 1777991090.0579276,
+    "ast_hash": "ac974e1a76de2be888768c2349638945",
+    "semantic_hash": "ac974e1a76de2be888768c2349638945"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\public\\favicon\\android-chrome-512x512.png": {
+    "mtime": 1777991090.149577,
+    "ast_hash": "12157614a6b21bd09ee98d0fbd4d0728",
+    "semantic_hash": "12157614a6b21bd09ee98d0fbd4d0728"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\public\\favicon\\apple-touch-icon.png": {
+    "mtime": 1777991089.4982796,
+    "ast_hash": "25f13129dea2884364bab99d96eaff0f",
+    "semantic_hash": "25f13129dea2884364bab99d96eaff0f"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\public\\favicon\\favicon-16x16.png": {
+    "mtime": 1777991089.7586224,
+    "ast_hash": "55d16464e7447db3d98bd27f76262f31",
+    "semantic_hash": "55d16464e7447db3d98bd27f76262f31"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\public\\favicon\\favicon-32x32.png": {
+    "mtime": 1777991089.6279526,
+    "ast_hash": "bca93c90f8a16b43f7fabf9c71fd2046",
+    "semantic_hash": "bca93c90f8a16b43f7fabf9c71fd2046"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\public\\images\\ico.png": {
+    "mtime": 1777967268.3898616,
+    "ast_hash": "75b03b65533766f71bca5e1c5adcbeb7",
+    "semantic_hash": "75b03b65533766f71bca5e1c5adcbeb7"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\public\\images\\logo.png": {
+    "mtime": 1777965932.7267916,
+    "ast_hash": "3d9bd9b1389edbaf6c145bfac8fc1335",
+    "semantic_hash": "3d9bd9b1389edbaf6c145bfac8fc1335"
+  },
+  "C:\\Cursos\\react\\apps\\diamadmin-landing\\frontend\\public\\images\\logo_diamadmin.png": {
+    "mtime": 1777967689.4962986,
+    "ast_hash": "966b8eda3017e7c34030a482b23d88cb",
+    "semantic_hash": "966b8eda3017e7c34030a482b23d88cb"
+  }
+}

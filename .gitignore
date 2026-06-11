@@ -85,3 +85,14 @@ desktop.ini
 # Claude Code (configuración local del entorno)
 # ──────────────────────────────────────────────
 .claude/
+
+# ──────────────────────────────────────────────
+# Graphify — knowledge graph
+# Se commitean los outputs finales (graph.html, graph.json, etc.)
+# Se excluyen archivos con rutas absolutas locales y la caché
+# ──────────────────────────────────────────────
+graphify-out/cache/
+graphify-out/.graphify_python
+graphify-out/.graphify_root
+graphify-out/.graphify_*.json
+graphify-out/.needs_update
