@@ -1,5 +1,14 @@
 const BREVO_API = "https://api.brevo.com/v3";
 
+// Carries the HTTP status so callers can tell a quota exhaustion (402/429)
+// from a bad recipient (400) and react accordingly.
+export class BrevoError extends Error {
+  constructor(public status: number, message: string) {
+    super(message);
+    this.name = "BrevoError";
+  }
+}
+
 function parseFrom(mailFrom: string): { name: string; email: string } {
   const m = mailFrom.match(/^(.+?)\s*<(.+?)>$/);
   return m ? { name: m[1].trim(), email: m[2].trim() } : { name: "Diamadmin", email: mailFrom.trim() };
@@ -26,7 +35,7 @@ export async function sendEmail(params: {
     headers: { "api-key": params.apiKey, "Content-Type": "application/json" },
     body: JSON.stringify(body),
   });
-  if (!res.ok) throw new Error(`Brevo ${res.status}: ${await res.text()}`);
+  if (!res.ok) throw new BrevoError(res.status, `Brevo ${res.status}: ${await res.text()}`);
 }
 
 async function brevoReq(apiKey: string, path: string, method: string, body?: unknown): Promise<Response> {
@@ -71,7 +80,11 @@ export async function getBrevoListContacts(apiKey: string, listId: string): Prom
   const limit = 500;
   while (true) {
     const res = await brevoReq(apiKey, `/contacts/lists/${listId}/contacts?limit=${limit}&offset=${offset}&sort=asc`, "GET");
-    if (!res.ok) break;
+    // Never return a partial list silently: a caller broadcasting over it would
+    // skip subscribers and still report success.
+    if (!res.ok) {
+      throw new BrevoError(res.status, `Brevo contacts list ${res.status} at offset ${offset}: ${await res.text()}`);
+    }
     const data = await res.json() as { contacts?: Array<{ email: string; attributes?: { FIRSTNAME?: string } }> };
     const batch = data.contacts ?? [];
     for (const c of batch) contacts.push({ email: c.email, firstName: c.attributes?.FIRSTNAME ?? "" });
