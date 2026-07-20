@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grafo 3D — C-Cursos-react-apps-diamadmin-landing</title>
+<style>
+:root{--bg:#0f1420;--panel:#171e2e;--line:#2a3550;--tx:#dbe4f5;--dim:#7d8cab;--ac:#61dbd6}
+@media (prefers-color-scheme: light){:root{--bg:#eef1f8;--panel:#ffffff;--line:#d8dfee;--tx:#1c2537;--dim:#5d6b8a;--ac:#0e9c96}}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--tx);font:14px/1.45 system-ui,Segoe UI,sans-serif;overflow:hidden;display:flex;flex-direction:column}
+header{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap;padding:.5rem .9rem;background:var(--panel);border-bottom:1px solid var(--line);flex:none}
+header h1{font-size:.95rem;font-weight:600}
+header input[type=search]{background:var(--bg);border:1px solid var(--line);color:var(--tx);border-radius:8px;padding:.32rem .6rem;width:220px}
+#filters{display:flex;gap:.65rem;flex-wrap:wrap;align-items:center}
+#filters label{display:inline-flex;gap:.28rem;align-items:center;font-size:.76rem;color:var(--dim);cursor:pointer;user-select:none;white-space:nowrap}
+#filters .sw{width:.66rem;height:.66rem;border-radius:3px;flex:none}
+header button{background:var(--bg);border:1px solid var(--line);color:var(--tx);border-radius:8px;padding:.3rem .6rem;cursor:pointer;font-size:.78rem}
+header button:hover,header button.on{border-color:var(--ac);color:var(--ac)}
+#meta{margin-left:auto;font-size:.72rem;color:var(--dim);white-space:nowrap}
+#wrap{flex:1 1 0;min-height:0;position:relative}
+canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;display:block}
+#panel{position:absolute;top:.8rem;right:.8rem;width:300px;max-height:calc(100% - 1.6rem);overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:.9rem;display:none}
+#panel h2{font-size:.9rem;word-break:break-all}
+#panel .f{font-size:.75rem;color:var(--dim);word-break:break-all;margin:.25rem 0 .6rem}
+#panel ul{list-style:none;font-size:.78rem}
+#panel li{padding:.22rem 0;border-top:1px solid var(--line);cursor:pointer;word-break:break-all}
+#panel li:hover{color:var(--ac)}
+#panel .tag{font-size:.68rem;color:var(--dim)}
+#hint{position:absolute;bottom:.6rem;left:.9rem;font-size:.72rem;color:var(--dim);pointer-events:none}
+</style></head><body>
+<header>
+  <h1>Grafo 3D</h1>
+  <input id="search" type="search" placeholder="Buscar símbolo o archivo…">
+  <button id="fitbtn" title="Reencuadrar (Esc)">⤢ Ajustar</button>
+  <button id="rotbtn" class="on" title="Rotación automática">⟳ Girar</button>
+  <span id="filters"></span>
+  <span id="meta"></span>
+</header>
+<div id="wrap"><canvas id="cv"></canvas>
+  <div id="panel"></div>
+  <div id="hint">arrastrar: rotar · botón derecho o Mayús+arrastrar: mover · rueda: zoom · clic: detalle · doble clic: aislar vecindario · Esc: reencuadrar</div>
+</div>
+<script>
+const DATA={"project":"C-Cursos-react-apps-diamadmin-landing","generated":"2026-07-20","nodes":[["esc","frontend/functions/_lib/emails.ts","1","Function",10,null,102.8,1.3,207.7],["userEmail","frontend/functions/_lib/emails.ts","27","Function",9,null,104.3,155.3,142.7],["adminEmail","frontend/functions/_lib/emails.ts","108","Function",5,null,-19,-100.2,285.8],["infoBox","frontend/functions/_lib/emails.ts","170","Function",4,null,32.2,-75.6,280.7],["quoteBlock","frontend/functions/_lib/emails.ts","181","Function",2,null,103.6,124.6,311.1],["messageBlock","frontend/functions/_lib/emails.ts","192","Function",2,null,-0.6,-0.2,379.9],["divider","frontend/functions/_lib/emails.ts","202","Function",4,null,104.2,104.3,180],["beneficiosList","frontend/functions/_lib/emails.ts","215","Function",3,null,197.7,85.7,104.1],["contactoEmailHtml","frontend/functions/_lib/emails.ts","229","Function",5,null,52.9,103.9,239.3],["adminContactoEmailHtml","frontend/functions/_lib/emails.ts","256","Function",5,null,-11.9,1.2,282.4],["sugerenciaEmailHtml","frontend/functions/_lib/emails.ts","282","Function",4,null,103.6,103.5,247.3],["adminSugerenciaEmailHtml","frontend/functions/_lib/emails.ts","300","Function",5,null,34.5,-1.6,308.9],["confirmacionHtml","frontend/functions/_lib/emails.ts","323","Function",4,null,105.1,62.8,103.6],["chispaHtml","frontend/functions/_lib/emails.ts","361","Function",3,null,20.5,104.7,102.7],["yaSubscritoHtml","frontend/functions/_lib/emails.ts","396","Function",5,null,104.6,103.4,103.3],["newsletterEmailHtml","frontend/functions/_lib/emails.ts","437","Function",4,null,180.8,88.5,179.3],["bajaConfirmadaEmailHtml","frontend/functions/_lib/emails.ts","463","Function",2,null,-0.8,221.5,103.7],["listaEsperaEmailHtml","frontend/functions/_lib/emails.ts","500","Function",3,null,104.1,4.7,107.1],["adminListaEsperaEmailHtml","frontend/functions/_lib/emails.ts","529","Function",4,null,40.8,-88.8,204.8],["adminNewsletterEmailHtml","frontend/functions/_lib/emails.ts","547","Function",4,null,-12.3,-50.4,208.4],["onRequestPost","frontend/functions/api/lista-espera.ts","15","Function",9,null,-7.6,-0.6,104],["onRequestPost","frontend/functions/api/contacto.ts","14","Function",8,null,-86,104.2,211.8],["buildConfirmUrl","frontend/functions/_lib/urls.ts","3","Function",1,null,19.6,206.9,-0.3],["buildUnsubscribeUrl","frontend/functions/_lib/urls.ts","7","Function",3,null,-74.6,77.8,-0.2],["buildDeleteDataUrl","frontend/functions/_lib/urls.ts","11","Function",1,null,-199,297.9,105],["PrivacidadPage","frontend/src/app/privacidad/page.tsx","24","Function",0,null,-310.3,-311.1,-188.6],["Error","frontend/src/app/error.tsx","6","Function",0,null,-416.1,-37.2,-7.8],["NotFound","frontend/src/app/not-found.tsx","8","Function",0,null,208.9,-102.8,415],["rateLimit","frontend/functions/_shared/rateLimit.ts","9","Function",5,null,-0.1,138.9,168.6],["getClientIp","frontend/functions/_shared/rateLimit.ts","28","Function",4,null,-18.2,104.6,137.4],["useFadeInOnScroll","frontend/src/hooks/useFadeInOnScroll.ts","4","Function",0,null,-311.5,-104.5,-209.1],["ConfirmarPage","frontend/src/app/confirmar/page.tsx","9","Function",1,null,105,-275.1,208.1],["SectorHex","frontend/src/components/sections/Hero.tsx","25","Function",1,null,207.4,-103.4,-105.2],["SectorGrid","frontend/src/components/sections/Hero.tsx","86","Function",4,null,169.7,-175.4,-82.6],["rowTopY","frontend/src/components/sections/Hero.tsx","95","Function",2,null,103.1,-207.4,-103.3],["hexCenter","frontend/src/components/sections/Hero.tsx","96","Function",2,null,139.6,-208.8,-149.5],["DiamondHero","frontend/src/components/sections/Hero.tsx","195","Function",1,null,246.3,-208.4,66],["move","frontend/src/components/sections/Hero.tsx","204","Function",0,null,0.3,208.9,-311.7],["Hero","frontend/src/components/sections/Hero.tsx","348","Function",2,null,207.3,-203.5,1.1],["ConfirmarContent","frontend/src/app/confirmar/ConfirmarContent.tsx","6","Function",1,null,104.4,-208.2,207.9],["onRequestPost","frontend/functions/api/newsletter.ts","17","Function",12,null,-0.5,104.1,42],["onRequestGet","frontend/functions/api/unsubscribe.ts","15","Function",8,null,-123.6,206.8,103.7],["robots","frontend/src/app/robots.ts","5","Function",0,null,-207.6,-264.4,207.9],["sitemap","frontend/src/app/sitemap.ts","5","Function",0,null,104.9,-416.2,-104.7],["ComoFunciona","frontend/src/components/sections/ComoFunciona.tsx","37","Function",0,null,311.8,-311.4,-103.7],["ListaEspera","frontend/src/components/sections/ListaEspera.tsx","7","Function",1,null,-103.5,-104.2,-173.2],["handleSubmit","frontend/src/components/sections/ListaEspera.tsx","15","Function",1,null,-103.9,-103.6,-103.2],["Contacto","frontend/src/components/sections/Contacto.tsx","13","Function",2,null,413.8,104.6,-161.1],["handleTabChange","frontend/src/components/sections/Contacto.tsx","38","Function",1,null,361.3,108.8,-209.3],["handleSubmit","frontend/src/components/sections/Contacto.tsx","44","Function",1,null,434.8,104.2,-93.2],["BajaContent","frontend/src/app/baja/BajaContent.tsx","6","Function",1,null,-104.4,-312.6,104.4],["onRequestGet","frontend/functions/api/confirm.ts","18","Function",10,null,-104.2,10.1,103.4],["hmacHex","frontend/functions/_lib/security.ts","2","Function",5,null,-103,130.7,43.2],["verifyHmac","frontend/functions/_lib/security.ts","13","Function",4,null,-170.3,106.9,104.7],["Home","frontend/src/app/page.tsx","9","Function",0,null,-104.3,-311.5,-104.8],["CookiesPage","frontend/src/app/cookies/page.tsx","12","Function",0,null,-207.8,-104,414.8],["MiniHex","frontend/src/components/sections/Modulos.tsx","31","Function",1,null,208.6,46.7,-208.2],["Modulos","frontend/src/components/sections/Modulos.tsx","46","Function",2,null,207.1,123.1,-208.4],["handleFilterClick","frontend/src/components/sections/Modulos.tsx","65","Function",1,null,207.4,201.4,-208.5],["page","frontend/functions/api/delete-data.ts","10","Function",1,null,-303.6,104.1,208.7],["onRequestGet","frontend/functions/api/delete-data.ts","46","Function",5,null,-218.2,73.6,169],["timingSafeCompare","frontend/functions/api/broadcast.ts","16","Function",1,null,-135.8,207.5,-104],["onRequestPost","frontend/functions/api/broadcast.ts","23","Function",6,null,-105.5,145.2,-45.4],["AvisoLegalPage","frontend/src/app/aviso-legal/page.tsx","12","Function",0,null,-103,-208.1,-312.9],["Suscripcion","frontend/src/components/sections/Suscripcion.tsx","57","Function",0,null,104.3,-201.8,-312.8],["QuienesSomos","frontend/src/components/sections/QuienesSomos.tsx","27","Function",0,null,0.1,0.8,-208],["Producto","frontend/src/components/sections/Producto.tsx","45","Function",0,null,311.3,0.9,0.8],["parseFrom","frontend/functions/_lib/brevo.ts","3","Function",1,null,-0.2,1.2,1.1],["sendEmail","frontend/functions/_lib/brevo.ts","8","Function",8,null,-74.3,103.8,94.9],["brevoReq","frontend/functions/_lib/brevo.ts","32","Function",5,null,-207.6,41.8,0.1],["isInBrevoList","frontend/functions/_lib/brevo.ts","40","Function",3,null,-103.7,17,1.3],["addToBrevoList","frontend/functions/_lib/brevo.ts","47","Function",3,null,-115.7,-24.3,47],["removeFromBrevoList","frontend/functions/_lib/brevo.ts","58","Function",3,null,-219.3,164.6,23.3],["deleteFromBrevo","frontend/functions/_lib/brevo.ts","63","Function",2,null,-264.2,25.2,89.6],["getBrevoListContacts","frontend/functions/_lib/brevo.ts","68","Function",3,null,-193.1,86.7,-101.7],["onRequestPost","frontend/functions/api/sugerencia.ts","14","Function",8,null,-25,103.9,227.1],["onRequest","frontend/functions/api/_middleware.ts","9","Function",0,null,-310.8,209.2,-209.8],["isValidEmail","frontend/functions/_lib/validate.ts","3","Function",7,null,-102.7,104.7,144.7],["checkLength","frontend/functions/_lib/validate.ts","17","Function",4,null,-46.1,60.8,145.3],["RootLayout","frontend/src/app/layout.tsx","115","Function",0,null,311.6,-103.5,208.1],["Navbar","frontend/src/components/layout/Navbar.tsx","16","Function",1,null,310.9,-103.8,-281.8],["CookieBanner","frontend/src/components/layout/CookieBanner.tsx","5","Function",1,null,-87.1,-0.9,-414.2],["accept","frontend/src/components/layout/CookieBanner.tsx","18","Function",1,null,-18.8,-0.5,-415.4],["ThemeToggle","frontend/src/components/layout/ThemeToggle.tsx","4","Function",2,null,330.1,-104.2,-208],["toggle","frontend/src/components/layout/ThemeToggle.tsx","20","Function",1,null,363,-104.6,-140.4],["Footer","frontend/src/components/layout/Footer.tsx","3","Function",0,null,-311.7,-208.9,-0.3],["BajaPage","frontend/src/app/baja/page.tsx","9","Function",1,null,-35.9,-312.5,101.8],["UserOpts","frontend/functions/_lib/emails.ts","15","Interface",1,null,175.5,208.8,104.5],["AdminOpts","frontend/functions/_lib/emails.ts","99","Interface",1,null,-80.3,-170.7,311.4],["Env","frontend/functions/api/lista-espera.ts","6","Interface",1,null,-0.2,-105.4,85.7],["Env","frontend/functions/api/contacto.ts","6","Interface",1,null,-141.1,104.4,311.6],["KVBinding","frontend/functions/_shared/rateLimit.ts","2","Interface",1,null,0.6,241.5,208.1],["Env","frontend/functions/api/newsletter.ts","8","Interface",1,null,92.1,104.1,-24.6],["Env","frontend/functions/api/unsubscribe.ts","7","Interface",1,null,-104.5,311.1,103.9],["Env","frontend/functions/api/confirm.ts","7","Interface",1,null,-155.6,-104.8,104.8],["Env","frontend/functions/api/delete-data.ts","5","Interface",1,null,-252.6,0.7,207.7],["Env","frontend/functions/api/broadcast.ts","5","Interface",1,null,-56.9,207.1,-103.4],["Env","frontend/functions/api/sugerencia.ts","6","Interface",1,null,-52.8,179.6,310.7],["/contacts/removeFromList","(routes)","0","Route",1,null,-309.4,207.2,0.3],["/contacts/lists/:listId/contacts","(routes)","0","Route",1,null,-208.5,53.8,-173.7],["Tab","frontend/src/components/sections/Contacto.tsx","7","Type",0,null,312.2,255.6,0.3]],"edges":[[86,50,"CALLS"],[31,39,"CALLS"],[47,48,"CALLS"],[38,36,"CALLS"],[38,33,"CALLS"],[57,56,"CALLS"],[57,58,"CALLS"],[80,83,"CALLS"],[33,35,"CALLS"],[33,34,"CALLS"],[33,32,"CALLS"],[71,69,"CALLS"],[9,0,"CALLS"],[9,2,"CALLS"],[9,3,"CALLS"],[9,5,"CALLS"],[18,0,"CALLS"],[18,2,"CALLS"],[18,3,"CALLS"],[19,0,"CALLS"],[19,2,"CALLS"],[19,3,"CALLS"],[11,0,"CALLS"],[11,2,"CALLS"],[11,3,"CALLS"],[11,5,"CALLS"],[16,1,"CALLS"],[13,1,"CALLS"],[13,6,"CALLS"],[12,0,"CALLS"],[12,1,"CALLS"],[12,7,"CALLS"],[8,0,"CALLS"],[8,1,"CALLS"],[8,4,"CALLS"],[8,6,"CALLS"],[73,69,"CALLS"],[74,69,"CALLS"],[35,34,"CALLS"],[70,69,"CALLS"],[17,0,"CALLS"],[17,1,"CALLS"],[15,0,"CALLS"],[15,1,"CALLS"],[15,7,"CALLS"],[15,6,"CALLS"],[41,77,"CALLS"],[41,53,"CALLS"],[41,72,"CALLS"],[41,52,"CALLS"],[41,24,"CALLS"],[41,68,"CALLS"],[41,16,"CALLS"],[51,77,"CALLS"],[51,53,"CALLS"],[51,70,"CALLS"],[51,71,"CALLS"],[51,52,"CALLS"],[51,23,"CALLS"],[51,68,"CALLS"],[51,13,"CALLS"],[51,19,"CALLS"],[60,59,"CALLS"],[60,77,"CALLS"],[60,53,"CALLS"],[60,73,"CALLS"],[20,29,"CALLS"],[20,28,"CALLS"],[20,77,"CALLS"],[20,78,"CALLS"],[20,71,"CALLS"],[20,68,"CALLS"],[20,17,"CALLS"],[20,18,"CALLS"],[21,29,"CALLS"],[21,28,"CALLS"],[21,77,"CALLS"],[21,78,"CALLS"],[21,68,"CALLS"],[21,8,"CALLS"],[21,9,"CALLS"],[40,29,"CALLS"],[40,28,"CALLS"],[40,77,"CALLS"],[40,78,"CALLS"],[40,70,"CALLS"],[40,52,"CALLS"],[40,23,"CALLS"],[40,68,"CALLS"],[40,14,"CALLS"],[40,22,"CALLS"],[40,12,"CALLS"],[62,61,"CALLS"],[62,74,"CALLS"],[62,52,"CALLS"],[62,23,"CALLS"],[62,68,"CALLS"],[75,29,"CALLS"],[75,28,"CALLS"],[75,77,"CALLS"],[75,78,"CALLS"],[75,68,"CALLS"],[75,10,"CALLS"],[75,11,"CALLS"],[72,69,"CALLS"],[68,67,"CALLS"],[10,0,"CALLS"],[10,1,"CALLS"],[10,4,"CALLS"],[53,52,"CALLS"],[14,0,"CALLS"],[14,1,"CALLS"],[14,7,"CALLS"],[14,6,"CALLS"],[47,49,"USAGE"],[81,82,"USAGE"],[45,46,"USAGE"],[83,84,"USAGE"],[2,88,"USAGE"],[41,93,"USAGE"],[51,94,"USAGE"],[60,95,"USAGE"],[20,89,"USAGE"],[21,90,"USAGE"],[40,92,"USAGE"],[62,96,"USAGE"],[75,97,"USAGE"],[28,91,"USAGE"],[1,87,"USAGE"],[74,99,"HTTP_CALLS"],[72,98,"HTTP_CALLS"]]};
+const COLORS={Function:'#61dbd6',Route:'#ff8781',Class:'#f4c069',Interface:'#a88bfa',Channel:'#6fb1ff',Enum:'#8fd97a',Type:'#e08bd4'};
+const nodes=DATA.nodes.map((n,i)=>({id:i,name:n[0],file:n[1],line:n[2],type:n[3],deg:n[4],method:n[5],x:n[6],y:n[7],z:n[8]}));
+const edges=DATA.edges.map(e=>({s:e[0],t:e[1],type:e[2]}));
+const adj=new Map();nodes.forEach(n=>adj.set(n.id,[]));
+edges.forEach((e,i)=>{adj.get(e.s).push({n:e.t,e:i,out:true});adj.get(e.t).push({n:e.s,e:i,out:false});});
+// radio de la nube (para encuadre)
+let RAD=1;nodes.forEach(n=>{const r=Math.hypot(n.x,n.y,n.z);if(r>RAD)RAD=r;});
+const cv=document.getElementById('cv'),ctx=cv.getContext('2d');
+let W,H,persF=1000,dist=RAD*3,fitDist=dist,yaw=0.6,pitch=0.35,panX=0,panY=0;
+let tx=0,ty=0,tz=0,sel=null,iso=null,hover=null,query='',autoRot=true,needsDraw=true;
+const active=new Set(Object.keys(COLORS));
+const PR=Math.max(1,window.devicePixelRatio||1);
+function resize(){W=cv.width=cv.clientWidth*PR;H=cv.height=cv.clientHeight*PR;persF=Math.min(W,H)*1.15;}
+function fit(){resize();yawV=0;dist=RAD*persF/(Math.min(W,H)*0.42)/1;dist=Math.max(dist,RAD*1.4);fitDist=dist;
+  panX=0;panY=0;tx=0;ty=0;tz=0;needsDraw=true;}
+function visible(n){if(!active.has(n.type))return false;
+  if(iso&&!iso.has(n.id))return false;
+  if(query&&!(n.name.toLowerCase().includes(query)||n.file.toLowerCase().includes(query)))return false;
+  return true;}
+// proyección: yaw alrededor del eje vertical, pitch alrededor del horizontal, perspectiva
+let cy1,sy1,cp1,sp1;
+function proj(n,o){
+  const x=n.x-tx,y=n.y-ty,z=n.z-tz;
+  const x1=x*cy1+z*sy1, z1=-x*sy1+z*cy1;
+  const y2=y*cp1-z1*sp1, z2=y*sp1+z1*cp1;
+  const depth=z2+dist;
+  if(depth<persF*0.05){o.ok=false;return o;}
+  const s=persF/depth;
+  o.ok=true;o.x=x1*s+W/2+panX;o.y=y2*s+H/2+panY;o.s=s;o.d=depth;return o;}
+const pcache=nodes.map(()=>({ok:false,x:0,y:0,s:0,d:0}));
+function nrad(n,s){return (3.2+Math.min(11,Math.sqrt(n.deg)*1.7))*PR*s*(dist/persF)*0.9;}
+function fog(d){const f=1-Math.max(0,Math.min(0.75,(d-dist*0.55)/(dist*1.6)));return f;}
+function draw(){
+  cy1=Math.cos(yaw);sy1=Math.sin(yaw);cp1=Math.cos(pitch);sp1=Math.sin(pitch);
+  ctx.clearRect(0,0,W,H);
+  const vis=[];
+  nodes.forEach(n=>{const p=proj(n,pcache[n.id]);if(visible(n)&&p.ok)vis.push(n.id);});
+  const visSet=new Set(vis);
+  // aristas (con niebla por profundidad media)
+  edges.forEach(e=>{if(!visSet.has(e.s)||!visSet.has(e.t))return;
+    const a=pcache[e.s],b=pcache[e.t];
+    const hl=sel!==null&&(e.s===sel||e.t===sel);
+    const al=hl?0.9:0.13*fog((a.d+b.d)/2);
+    ctx.strokeStyle=hl?'rgba(97,219,214,'+al+')':'rgba(125,140,171,'+al+')';
+    ctx.lineWidth=(hl?1.6:0.7)*PR;
+    ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();});
+  // nodos: lejos → cerca
+  vis.sort((i,j)=>pcache[j].d-pcache[i].d);
+  const nbSet=sel!==null?new Set(adj.get(sel).map(a=>a.n)):null;
+  for(const id of vis){const n=nodes[id],p=pcache[id];
+    const r=Math.max(1.2*PR,nrad(n,p.s));
+    const dim=sel!==null&&id!==sel&&!nbSet.has(id);
+    ctx.globalAlpha=(dim?0.18:1)*Math.max(0.3,fog(p.d));
+    ctx.beginPath();ctx.arc(p.x,p.y,r,0,7);
+    ctx.fillStyle=COLORS[n.type]||'#999';ctx.fill();
+    if(id===sel||id===hover){ctx.globalAlpha=1;ctx.strokeStyle='#fff';ctx.lineWidth=1.5*PR;ctx.stroke();}
+    if(!dim&&(n.deg>=16||id===sel||id===hover||(query&&vis.length<90)||fitDist/dist>2.2)){
+      ctx.fillStyle=getComputedStyle(document.body).getPropertyValue('--tx');
+      ctx.font=(10.5*PR)+'px system-ui';ctx.fillText(n.name,p.x+r+3,p.y+3.5);}
+  }
+  ctx.globalAlpha=1;
+  document.getElementById('meta').textContent=
+    DATA.project+' · '+DATA.generated+' · '+vis.length+'/'+nodes.length+' nodos · '+edges.length+' aristas';
+}
+function pick(mx,my){const x=mx*PR,y=my*PR;let best=null,bd=1e9,bdepth=1e18;
+  nodes.forEach(n=>{if(!visible(n))return;const p=pcache[n.id];if(!p.ok)return;
+    const dx=p.x-x,dy=p.y-y;const d=dx*dx+dy*dy;
+    const r=Math.max(1.2*PR,nrad(n,p.s))+5*PR;
+    if(d<r*r&&(p.d<bdepth-1||(Math.abs(p.d-bdepth)<1&&d<bd))){bd=d;bdepth=p.d;best=n.id;}});
+  return best;}
+function showPanel(id){const p=document.getElementById('panel');
+  if(id===null){p.style.display='none';return;}
+  const n=nodes[id];const nb=adj.get(id);
+  p.innerHTML='<h2>'+(n.method?n.method+' ':'')+n.name+' <span class="tag">('+n.type+')</span></h2>'+
+    '<div class="f">'+n.file+':'+n.line+'</div>'+
+    '<ul>'+nb.slice(0,60).map(a=>{const m=nodes[a.n];const arrow=a.out?'→':'←';
+      return '<li data-n="'+a.n+'">'+arrow+' <b>'+m.name+'</b> <span class="tag">'+edges[a.e].type+' · '+m.file.split('/').pop()+'</span></li>';}).join('')+
+    (nb.length>60?'<li class="tag">… y '+(nb.length-60)+' más</li>':'')+'</ul>';
+  p.style.display='block';
+  p.querySelectorAll('li[data-n]').forEach(li=>li.onclick=()=>{sel=+li.dataset.n;center(sel);showPanel(sel);needsDraw=true;});}
+function center(id){const n=nodes[id];tx=n.x;ty=n.y;tz=n.z;panX=0;panY=0;}
+// interacción
+let drag=null,yawV=0;
+cv.onmousedown=e=>{e.preventDefault();autoRot=false;rotbtn.classList.remove('on');
+  drag={x:e.clientX,y:e.clientY,yaw,pitch,panX,panY,btn:e.button,shift:e.shiftKey,moved:false};};
+cv.oncontextmenu=e=>e.preventDefault();
+window.onmousemove=e=>{if(drag){const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+    if(Math.abs(dx)+Math.abs(dy)>4)drag.moved=true;
+    if(drag.btn===2||drag.shift){panX=drag.panX+dx*PR;panY=drag.panY+dy*PR;}
+    else{yaw=drag.yaw+dx*0.005;pitch=Math.max(-1.5,Math.min(1.5,drag.pitch+dy*0.005));}
+    needsDraw=true;}
+  else{const r=cv.getBoundingClientRect();const h=pick(e.clientX-r.left,e.clientY-r.top);
+    if(h!==hover){hover=h;cv.style.cursor=h===null?'grab':'pointer';needsDraw=true;}}};
+window.onmouseup=e=>{if(drag&&!drag.moved&&drag.btn===0){const r=cv.getBoundingClientRect();
+    sel=pick(e.clientX-r.left,e.clientY-r.top);showPanel(sel);needsDraw=true;}drag=null;};
+cv.ondblclick=e=>{const r=cv.getBoundingClientRect();const id=pick(e.clientX-r.left,e.clientY-r.top);
+  if(id!==null){iso=new Set([id,...adj.get(id).map(a=>a.n)]);sel=id;center(id);dist=fitDist*0.45;showPanel(id);needsDraw=true;}};
+cv.onwheel=e=>{e.preventDefault();dist*=e.deltaY<0?0.88:1.14;dist=Math.max(RAD*0.15,Math.min(RAD*8,dist));needsDraw=true;};
+window.onkeydown=e=>{if(e.key==='Escape'){sel=null;iso=null;showPanel(null);fit();}};
+const rotbtn=document.getElementById('rotbtn');
+rotbtn.onclick=()=>{autoRot=!autoRot;rotbtn.classList.toggle('on',autoRot);};
+document.getElementById('fitbtn').onclick=()=>fit();
+document.getElementById('search').oninput=e=>{query=e.target.value.trim().toLowerCase();needsDraw=true;};
+const fl=document.getElementById('filters');
+Object.entries(COLORS).forEach(([t,c])=>{const l=document.createElement('label');
+  l.innerHTML='<input type="checkbox" checked> <span class="sw" style="background:'+c+'"></span>'+t;
+  l.querySelector('input').onchange=ev=>{ev.target.checked?active.add(t):active.delete(t);needsDraw=true;};fl.appendChild(l);});
+new ResizeObserver(()=>{resize();needsDraw=true;}).observe(document.getElementById('wrap'));
+(function loop(){requestAnimationFrame(loop);
+  if(autoRot){yaw+=0.0022;needsDraw=true;}
+  if(needsDraw){needsDraw=false;draw();}})();
+fit();
+</script></body></html>

@@ -87,12 +87,7 @@ desktop.ini
 .claude/
 
 # ──────────────────────────────────────────────
-# Graphify — knowledge graph
-# Se commitean los outputs finales (graph.html, graph.json, etc.)
-# Se excluyen archivos con rutas absolutas locales y la caché
+# codebase-memory-mcp — grafo de conocimiento
+# El snapshot .codebase-memory/graph.db.zst y el visual graph.html
+# SE COMMITEAN (multi-dispositivo). La caché vive fuera del repo.
 # ──────────────────────────────────────────────
-graphify-out/cache/
-graphify-out/.graphify_python
-graphify-out/.graphify_root
-graphify-out/.graphify_*.json
-graphify-out/.needs_update
