@@ -31,7 +31,7 @@ export default function AvisoLegalPage() {
             </h1>
           </div>
           <p className="text-sm text-[#607D8B] dark:text-[#9BA6AD]">
-            &Uacute;ltima actualizaci&oacute;n: <strong>mayo de 2026</strong>
+            &Uacute;ltima actualizaci&oacute;n: <strong>julio de 2026</strong>
           </p>
         </div>
       </section>
@@ -154,9 +154,38 @@ export default function AvisoLegalPage() {
           </div>
 
           {/* 6 */}
-          <div id="ley-aplicable" className="scroll-mt-28">
+          <div id="inteligencia-artificial" className="scroll-mt-28">
             <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
               <span className="w-6 h-6 rounded-full bg-[#607D8B]/20 text-[#607D8B] dark:text-[#9BA6AD] text-xs font-bold flex items-center justify-center">6</span>
+              Contenidos generados con inteligencia artificial
+            </h2>
+            <div className="text-sm text-[#455A64] dark:text-[#9BA6AD] leading-relaxed space-y-3">
+              <p>
+                En cumplimiento de las obligaciones de transparencia previstas en el{" "}
+                <strong className="text-gray-900 dark:text-white">Reglamento (UE) 2024/1689
+                (Reglamento de Inteligencia Artificial)</strong>, Diamadmin informa de que los contenidos
+                publicados en este sitio web que hayan sido generados o modificados de forma significativa
+                mediante sistemas de inteligencia artificial se identifican de manera clara y visible como tales,
+                junto al propio contenido.
+              </p>
+              <p>
+                A fecha de la &uacute;ltima actualizaci&oacute;n de este Aviso Legal,{" "}
+                <strong className="text-gray-900 dark:text-white">los contenidos de este sitio web
+                han sido elaborados por personas</strong>. Cuando se publiquen contenidos generados con
+                asistencia de inteligencia artificial &mdash;por ejemplo, art&iacute;culos divulgativos&mdash;
+                incorporar&aacute;n el aviso correspondiente y este apartado se actualizar&aacute; en consecuencia.
+              </p>
+              <p>
+                La utilizaci&oacute;n de estas herramientas no exime a Diamadmin de su responsabilidad sobre el
+                contenido publicado, que es revisado antes de su difusi&oacute;n.
+              </p>
+            </div>
+          </div>
+
+          {/* 7 */}
+          <div id="ley-aplicable" className="scroll-mt-28">
+            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+              <span className="w-6 h-6 rounded-full bg-[#607D8B]/20 text-[#607D8B] dark:text-[#9BA6AD] text-xs font-bold flex items-center justify-center">7</span>
               Ley aplicable y jurisdicci&oacute;n
             </h2>
             <p className="text-sm text-[#455A64] dark:text-[#9BA6AD] leading-relaxed">
