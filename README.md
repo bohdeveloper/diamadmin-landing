@@ -1,139 +1,101 @@
-# Diamadmin – Landing oficial
+# Diamadmin — Landing oficial
 
-🌐 **Dominio:** https://diamadmin.com  
-🚀 **Despliegue:** Cloudflare Pages
+Landing de **Diamadmin**, un ERP modular para pymes que centraliza stock, ventas, compras,
+facturación, finanzas y RRHH en una sola plataforma.
 
----
+🌐 **https://www.diamadmin.com** · 🚀 Cloudflare Pages
 
-Landing oficial de **Diamadmin**, una aplicación de gestión administrativa modular orientada a pequeños y medianos negocios.
-
-La landing está diseñada como **sitio estático optimizado para rendimiento y SEO**, y cumple dos objetivos clave:
-
-- Explicar claramente qué es Diamadmin y qué problema resuelve
-- Validar el producto antes del lanzamiento de la aplicación completa
-
-La aplicación real vive en un dominio separado (`app.diamadmin.com`) y en un repositorio distinto.
+> **Estado:** productiva. Fase 1 completada · **Fase 2 (contenido SEO) en curso** — ver [plan.md](plan.md).
 
 ---
 
-## 1. Tecnologías utilizadas
+## Qué es
 
-### Frontend
-- Next.js 15.1.6
-- React 18
-- TypeScript
-- TailwindCSS
-- motion/react (Framer Motion)
-- lucide-react
-- Bebas Neue (Google Fonts)
-- ESLint
-- cross-env
-- Cloudflare Pages
+Esta landing es la **capa de validación** de Diamadmin: explica el producto y capta interés real
+(contacto, newsletter con double opt-in y lista de espera) antes del lanzamiento de la aplicación.
 
-> El sitio se genera como **static export**, priorizando SEO, velocidad y simplicidad.
+La aplicación real vive en `app.diamadmin.com`, con **Angular + Spring Boot + PostgreSQL**, en un
+repositorio y un hosting independientes. La landing no depende de la app ni la app de la landing.
 
 ---
 
-## 2. Arquitectura actual
+## Qué funciona ya
+
+- **Landing multi-sector** con 8 sectores (Retail, Logística, Salud, Hostelería, Industria, Real Estate, RRHH, Finanzas) y grid de módulos filtrable.
+- **SEO técnico completo:** JSON-LD (`SoftwareApplication`, `Organization`, `FAQPage`, `WebSite`), Open Graph, Twitter Cards, sitemap dinámico, canonical URLs y redirección 301 apex → www.
+- **Sistema de mailing sobre Brevo:** contacto, sugerencias, newsletter con **double opt-in**, bajas con token HMAC firmado, derecho al olvido (RGPD) y envío masivo protegido.
+- **12 cápsulas de newsletter** — serie educativa en [capsulas/](capsulas/).
+- **Lista de espera** con confirmación por email y alta en la lista de contactos.
+- **Seguridad:** rate limiting por IP sobre Cloudflare KV, CSP y security headers, validación estricta y honeypot en todos los endpoints públicos.
+- **Cumplimiento legal:** privacidad (RGPD/LOPD-GDD), cookies (LSSI-CE/AEPD), aviso legal y cookie banner.
+- **Dark / light mode** con persistencia y script anti-flicker · animaciones Framer Motion · responsive mobile-first.
+- **Analytics sin cookies** con Umami · **29 tests** con Vitest.
+
+---
+
+## Stack
+
+| Capa | Tecnología |
+|---|---|
+| Framework | Next.js 15.1.6 (App Router, static export) |
+| UI | React 18 · TypeScript 5 · TailwindCSS 3.4 |
+| Animación / iconos | motion (Framer Motion) · lucide-react |
+| Backend | Cloudflare Pages Functions |
+| Email | Brevo (SMTP + Contacts API) |
+| Rate limiting | Cloudflare KV |
+| Analytics | Umami |
+| Tests | Vitest |
+
+---
+
+## Estructura
 
 ```
-Next.js (Landing)
-↓
-Cloudflare Pages
-```
-
-- Sitio estático sin backend propio
-- Renderizado en build-time
-- Optimizado para SEO y Core Web Vitals
-- Formularios de contacto con UX completa (integración backend pendiente)
-
----
-
-## 3. Relación con la aplicación real
-
-Diamadmin está dividido desde el inicio en **dos capas independientes**:
-
-### 🌍 Landing (este repo)
-- Dominio: `diamadmin.com`
-- Objetivo: marketing, validación, captación
-- Tecnología: Next.js + Cloudflare Pages
-- Estado: productivo
-
-### ⚙️ Aplicación real (otro repo)
-- Dominio: `app.diamadmin.com`
-- Angular + Spring Boot + PostgreSQL
-- Hosting independiente (VPS / PaaS)
-- Autenticación, permisos, lógica de negocio
-- Arquitectura multi-sector: Retail, Logística, Salud, Hostelería, Industria, Real Estate, RRHH, Finanzas
-
-La landing **no depende de la app**, y la app **no depende de la landing**.
-
----
-
-## 4. Estructura del proyecto
-
-```
-frontend/src/
-├── app/
-│   ├── globals.css
-│   ├── layout.tsx        # Root layout + SEO metadata + JSON-LD
-│   ├── page.tsx          # Composición de secciones
-│   └── sitemap.ts        # Sitemap dinámico
-├── components/
-│   ├── layout/
-│   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
-│   │   └── ThemeToggle.tsx
-│   └── sections/
-│       ├── Hero.tsx          # Animación diamante + honeycomb de sectores
-│       ├── Producto.tsx
-│       ├── Modulos.tsx       # Grid filtrable por sector
-│       ├── ComoFunciona.tsx
-│       ├── QuienesSomos.tsx
-│       └── Contacto.tsx      # Formulario 3 pestañas (contacto, sugerencia, newsletter)
-├── hooks/
-│   └── useFadeInOnScroll.ts
-├── lib/
-│   └── utils.ts
-├── styles/
-│   └── variables.css
-└── types/
-    └── css.d.ts
+├── capsulas/                # 12 plantillas HTML de newsletter
+├── frontend/
+│   ├── functions/           # Cloudflare Pages Functions
+│   │   ├── _lib/            # brevo · emails · security · urls · validate
+│   │   ├── _shared/         # rateLimit
+│   │   └── api/             # 8 endpoints + middleware
+│   ├── public/              # _headers · _redirects · favicon · images
+│   ├── src/                 # app/ · components/ · config/ · hooks/ · styles/
+│   └── __tests__/
+└── spec.md · plan.md · CLAUDE.md
 ```
 
 ---
 
-## 5. Estado actual del proyecto
-
-✅ Landing funcional y productiva  
-✅ SEO técnico completo (JSON-LD, sitemap, Open Graph, Twitter Cards)  
-✅ Configuración estable con Cloudflare Pages  
-✅ Dark / light mode con ThemeToggle y anti-flicker script  
-✅ Animaciones Framer Motion en Hero y todas las secciones  
-✅ Multi-sector: 8 sectores cubiertos (Retail, Logística, Salud, Hostelería, Industria, Real Estate, RRHH, Finanzas)  
-✅ Grid de módulos con filtro por sector  
-✅ Formulario de contacto con 3 pestañas (UX completa)  
-⏳ Integración backend del formulario de contacto  
-⏳ Analytics / métricas de visitas  
-⏳ Estrategia de precios (actualmente ocultos, pendiente decisión)  
-
----
-
-## 6. Instalación y desarrollo local
+## Arranque
 
 ```bash
-# Instalar dependencias
-cd frontend && npm install
-
-# Desarrollo local
-npm run dev          # http://localhost:3000
-
-# Build estático
-npm run build
-
-# Servir build
-npm run start
-
-# Linter
+cd frontend
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static export
+npm run test     # Vitest
 npm run lint
 ```
+
+En Windows, `start-diamadmin.bat` en la raíz valida dependencias y abre el dev server.
+
+### Variables de entorno (Cloudflare Pages)
+
+`BREVO_API_KEY` · `BREVO_LIST_ID` · `BROADCAST_SECRET` · `MAIL_FROM` · `CONTACT_NOTIFY_EMAIL` · `MAIL_TEST_TO`
+
+Binding KV requerido: `RATE_LIMIT_KV`.
+
+---
+
+## Documentación
+
+| Documento | Contenido |
+|---|---|
+| [spec.md](spec.md) | Especificación viva: arquitectura, invariantes, convenciones y metodología |
+| [plan.md](plan.md) | Plan de trabajo: fases pendientes, deuda técnica e histórico |
+| [CLAUDE.md](CLAUDE.md) | Reglas de trabajo para Claude Code |
+| `.codebase-memory/graph.html` | Visor 3D del grafo de código (abrir en el navegador) |
+
+---
+
+> Este repositorio sigue **Spec-Driven Development**: `spec.md` y `plan.md` son la fuente de verdad.
+> Nada se implementa sin su punto en el plan, y toda decisión nueva se registra en la spec.
